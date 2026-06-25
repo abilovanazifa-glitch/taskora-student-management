@@ -115,7 +115,7 @@ function ProfileEditForm({
   }
 
   return (
-    <form action={formAction}>
+    <form action={formAction} className="flex min-h-0 flex-1 flex-col overflow-hidden">
       <DialogBody className="space-y-5 pt-2">
         <div className="space-y-2">
           <Label htmlFor="fullName">{tAuth("name")}</Label>

@@ -272,7 +272,6 @@ export async function ensureDefaultListsAndLabels(userId: string) {
 export async function prepareUserTaskWorkspace(userId: string) {
   const projectId = await ensureUserWorkspace(userId);
   await ensureDefaultListsAndLabels(userId);
-  await ensureDefaultTasks(userId, projectId);
   return projectId;
 }
 
