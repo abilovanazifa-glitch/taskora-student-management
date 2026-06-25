@@ -1,4 +1,5 @@
 import type { Prisma } from "@prisma/client";
+import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { getAccessibleProjectIds } from "@/lib/permissions/access";
 import { canEditTask, getProjectRole, hasProjectPermission } from "@/lib/permissions/project";
@@ -120,7 +121,16 @@ function buildTaskOrderBy(
   }
 }
 
-export async function listTasks(userId: string, filters: TaskFilterInput = {}) {
+export function listTasks(userId: string, filters: TaskFilterInput = {}) {
+  const cacheKey = `tasks-${userId}-${JSON.stringify(filters)}`;
+  return unstable_cache(
+    () => fetchTasks(userId, filters),
+    [cacheKey],
+    { revalidate: 30 },
+  )();
+}
+
+async function fetchTasks(userId: string, filters: TaskFilterInput = {}) {
   const projectIds = await getAccessibleProjectIds(userId);
   const search = filters.search?.trim();
   const status = filters.status && filters.status !== "ALL" ? filters.status : undefined;

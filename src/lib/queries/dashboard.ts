@@ -5,6 +5,7 @@ import {
   startOfDay,
   startOfWeek,
 } from "date-fns";
+import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { getAccessibleProjectIds } from "@/lib/permissions/access";
 import { listSubjects } from "@/lib/queries/subjects";
@@ -16,7 +17,7 @@ const taskInclude = {
   assignee: { select: { id: true, fullName: true, avatarUrl: true } },
 } as const;
 
-export async function getDashboardData(userId: string) {
+async function fetchDashboardData(userId: string) {
   const projectIds = await getAccessibleProjectIds(userId);
   const now = new Date();
   const todayStart = startOfDay(now);
@@ -163,6 +164,14 @@ export async function getDashboardData(userId: string) {
   };
 }
 
+export function getDashboardData(userId: string) {
+  return unstable_cache(
+    () => fetchDashboardData(userId),
+    [`dashboard-${userId}`],
+    { revalidate: 30 },
+  )();
+}
+
 export type DashboardTask = Awaited<
-  ReturnType<typeof getDashboardData>
+  ReturnType<typeof fetchDashboardData>
 >["overdueTasks"][number];

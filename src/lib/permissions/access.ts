@@ -80,15 +80,16 @@ export async function requireTaskAccess(taskId: string, action: TaskAction) {
 }
 
 export async function getAccessibleProjectIds(userId: string) {
-  const memberships = await prisma.projectMember.findMany({
-    where: { userId },
-    select: { projectId: true },
-  });
-
-  const owned = await prisma.project.findMany({
-    where: { ownerId: userId },
-    select: { id: true },
-  });
+  const [memberships, owned] = await Promise.all([
+    prisma.projectMember.findMany({
+      where: { userId },
+      select: { projectId: true },
+    }),
+    prisma.project.findMany({
+      where: { ownerId: userId },
+      select: { id: true },
+    }),
+  ]);
 
   return [...new Set([...memberships.map((m) => m.projectId), ...owned.map((p) => p.id)])];
 }
