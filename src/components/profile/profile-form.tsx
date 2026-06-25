@@ -11,7 +11,7 @@ import { Pencil } from "lucide-react";
 import type { PreferredLanguage, Theme } from "@prisma/client";
 import { updateProfile, type ProfileUpdateState } from "@/lib/actions/profile";
 import type { AuthErrorCode } from "@/lib/validations/auth";
-import { dbThemeToNextTheme, preferredLanguageToLocale } from "@/lib/i18n/locale";
+import { dbThemeToNextTheme, nextThemeToDbTheme, preferredLanguageToLocale } from "@/lib/i18n/locale";
 import { useAppLocale } from "@/lib/i18n/use-app-locale";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -241,14 +241,14 @@ export function ProfileForm({ user, stats }: Omit<ProfileFormProps, "locale">) {
   const tAuth = useTranslations("auth");
   const tCommon = useTranslations("common");
   const { update } = useSession();
-  const { setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const router = useRouter();
   const [editOpen, setEditOpen] = useState(false);
   const [state, formAction, isPending] = useActionState(
     async (prev: ProfileUpdateState, formData: FormData) => {
       const result = await updateProfile(prev, formData);
       if (result.success && result.data) {
-        void update({
+        await update({
           fullName: result.data.fullName,
           preferredLanguage: result.data.preferredLanguage,
           theme: result.data.theme,
@@ -367,7 +367,7 @@ export function ProfileForm({ user, stats }: Omit<ProfileFormProps, "locale">) {
               fullName: activeProfile.fullName,
               avatarUrl: activeProfile.avatarUrl ?? "",
               preferredLanguage: activeProfile.preferredLanguage,
-              theme: activeProfile.theme,
+              theme: resolvedTheme ? nextThemeToDbTheme(resolvedTheme) : activeProfile.theme,
             }}
             email={user.email}
             state={state}

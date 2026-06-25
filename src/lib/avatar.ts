@@ -10,6 +10,7 @@ export const AVATAR_ALLOWED_TYPES = new Set([
 export function isValidAvatarUrl(value: string): boolean {
   if (value === "") return true;
   if (value.startsWith("/uploads/avatars/")) return true;
+  if (value.startsWith("data:image/")) return true;
   try {
     const url = new URL(value);
     return url.protocol === "http:" || url.protocol === "https:";
