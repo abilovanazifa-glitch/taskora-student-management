@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "title": "Taskora",
+    "description": "Project, schedule, and task management for students"
+  },
+  "common": {
+    "appName": "Taskora",
+    "tagline": "Projects, calendar, and tasks in one place",
+    "loading": "Loading...",
+    "comingSoon": "This feature will be available in the next phase",
+    "placeholderPage": "Placeholder page",
+    "close": "Close",
+    "skipToContent": "Skip to main content",
+    "tryAgain": "Try again",
+    "backHome": "Back to home",
+    "backDashboard": "Back to dashboard"
+  },
+  "errors": {
+    "pageTitle": "Something went wrong",
+    "pageDescription": "An unexpected error occurred. Try again or return home.",
+    "globalTitle": "Application error",
+    "globalDescription": "A critical error occurred. Please reload the page."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist or may have been moved.",
+    "backHome": "Back to home"
+  },
+  "nav": {
+    "dashboard": "Today",
+    "projects": "Projects",
+    "calendar": "Calendar",
+    "tasks": "Tasks",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "login": "Log in",
+    "register": "Sign up",
+    "logout": "Log out",
+    "menu": "Menu",
+    "openMenu": "Open menu"
+  },
+  "landing": {
+    "heroTitle": "Smart study management for students",
+    "heroDescription": "Manage multiple projects, deadlines, priorities, and weekly or monthly views in one workspace.",
+    "getStarted": "Get started",
+    "signIn": "Log in",
+    "features": {
+      "projects": "Multiple projects and members",
+      "calendar": "Weekly and monthly calendar",
+      "tasks": "Subjects, deadlines, and priorities",
+      "i18n": "Japanese, Uzbek, and English interface"
+    },
+    "featureDescriptions": {
+      "projects": "Invite team members and manage several study projects in parallel",
+      "calendar": "See schedules and deadlines in week, month, day, and list views",
+      "tasks": "Organize tasks with subjects, priorities, tags, and kanban",
+      "i18n": "Switch the UI between Japanese, Uzbek, and English"
+    }
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginDescription": "Sign in to your Taskora account",
+    "registerTitle": "Sign up",
+    "registerDescription": "Create a new Taskora account",
+    "email": "Email",
+    "password": "Password",
+    "name": "Full name",
+    "confirmPassword": "Confirm password",
+    "preferredLanguage": "Preferred language",
+    "passwordHint": "At least 8 characters with uppercase, lowercase, and a number",
+    "submitLogin": "Log in",
+    "submitRegister": "Create account",
+    "submittingLogin": "Signing in...",
+    "submittingRegister": "Creating account...",
+    "registrationSuccess": "Account created. Please log in.",
+    "emailPlaceholder": "student@example.com",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "languages": {
+      "ja": "日本語",
+      "uz": "Oʻzbekcha",
+      "en": "English"
+    },
+    "errors": {
+      "emailInvalid": "Enter a valid email address",
+      "emailTaken": "This email is already registered",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "passwordUppercase": "Password must include an uppercase letter",
+      "passwordLowercase": "Password must include a lowercase letter",
+      "passwordNumber": "Password must include a number",
+      "passwordMismatch": "Passwords do not match",
+      "confirmPasswordRequired": "Confirm your password",
+      "fullNameMinLength": "Full name must be at least 2 characters",
+      "fullNameMaxLength": "Full name must be 120 characters or less",
+      "avatarUrlInvalid": "Enter a valid URL or upload an image",
+      "avatarUploadInvalid": "Only JPG, PNG, WebP, and GIF are allowed",
+      "avatarTooLarge": "Image must be 2MB or smaller",
+      "invalidCredentials": "Invalid email or password",
+      "registrationFailed": "Registration failed. Try again.",
+      "profileUpdateFailed": "Failed to update profile",
+      "unauthorized": "You must be logged in"
+    }
+  },
+  "profile": {
+    "pageTitle": "My profile",
+    "pageDescription": "View and update your account information",
+    "overview": "Account overview",
+    "overviewDescription": "Basic profile information",
+    "editAction": "Edit",
+    "editTitle": "Edit profile",
+    "editDescription": "Update display name, language, theme, and more",
+    "avatarUrl": "Avatar URL",
+    "avatarPhoto": "Profile photo",
+    "avatarUpload": "Upload photo",
+    "avatarUploading": "Uploading...",
+    "avatarUploadSuccess": "Photo saved",
+    "avatarUploadFailed": "Could not upload photo. Choose an image under 2MB.",
+    "avatarUploadHint": "JPG, PNG, WebP, GIF — max 2MB",
+    "avatarRemove": "Remove photo",
+    "avatarUrlOptional": "Or image URL (optional)",
+    "avatarUrlHint": "URL is optional if you upload a photo",
+    "avatarUrlPlaceholder": "https://example.com/avatar.jpg",
+    "theme": "Theme",
+    "memberSince": "Member since",
+    "logoutHint": "Press the button to sign out of your account.",
+    "saveChanges": "Save changes",
+    "saving": "Saving...",
+    "saveSuccess": "Profile updated",
+    "stats": {
+      "projects": "Projects",
+      "tasks": "Total tasks",
+      "completedTasks": "Completed tasks"
+    },
+    "themes": {
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    }
+  },
+  "pages": {
+    "dashboard": "Today",
+    "projects": "Projects",
+    "projectDetail": "Project details",
+    "calendar": "Calendar",
+    "tasks": "Tasks",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "Your tasks first — then projects and calendar",
+    "greeting": "Hello",
+    "focusHint": "Tasks grouped by status below. Click a card or open kanban.",
+    "openKanban": "Open kanban",
+    "viewAll": "View all",
+    "progress": "Progress",
+    "weeklyCompletion": "Weekly completion",
+    "weeklyStats": "{completed} / {due} completed",
+    "projectMeta": "{tasks} tasks · {members} members",
+    "stats": {
+      "missedTasks": "Overdue",
+      "inProgressTasks": "In progress",
+      "pendingTasks": "To do",
+      "completedTasks": "Completed"
+    },
+    "sections": {
+      "missedTasks": "Overdue",
+      "inProgressTasks": "In progress",
+      "pendingTasks": "To do",
+      "completedTasks": "Completed",
+      "emptyMissed": "No overdue tasks",
+      "emptyInProgress": "No tasks in progress",
+      "emptyPending": "No pending tasks",
+      "emptyCompleted": "No completed tasks",
+      "lists": "Lists",
+      "calendarPreview": "Calendar",
+      "recentNotifications": "Notifications"
+    },
+    "empty": {
+      "todayTasks": "No tasks for today",
+      "todayTasksHint": "Add a task using the quick create form",
+      "overdueTasks": "No overdue tasks",
+      "upcomingDeadlines": "No upcoming deadlines",
+      "lists": "No lists yet",
+      "listsHint": "Create a list on the Tasks page",
+      "calendarPreview": "No events scheduled",
+      "notifications": "No notifications"
+    },
+    "quickTask": {
+      "title": "Quick task",
+      "project": "Project",
+      "titleUz": "Title (UZ)",
+      "titleJa": "Title (JA)",
+      "deadline": "Deadline",
+      "submit": "Create task",
+      "submitting": "Creating...",
+      "success": "Task created",
+      "noProjects": "No projects available",
+      "errors": {
+        "forbidden": "Permission denied",
+        "saveFailed": "Failed to save"
+      }
+    },
+    "quickEvent": {
+      "title": "Quick event",
+      "project": "Project",
+      "noProject": "No project",
+      "titleUz": "Title (UZ)",
+      "titleJa": "Title (JA)",
+      "startAt": "Start",
+      "endAt": "End",
+      "allDay": "All day",
+      "submit": "Create event",
+      "submitting": "Creating...",
+      "success": "Event created",
+      "errors": {
+        "forbidden": "Permission denied",
+        "startRequired": "Start date and time are required",
+        "endRequired": "End date and time are required",
+        "endBeforeStart": "End must be after start",
+        "saveFailed": "Failed to save"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Create, manage, and track project progress",
+    "createProject": "Create project",
+    "editProject": "Edit",
+    "archiveProject": "Archive",
+    "deleteProject": "Delete",
+    "confirmDelete": "Delete this project?",
+    "progress": "Progress",
+    "taskCount": "{count} tasks",
+    "memberCount": "{count} members",
+    "ownerLabel": "Owner",
+    "openProject": "Open project {name}",
+    "viewAllTasks": "View all {count} tasks",
+    "viewMoreTasks": "View {count} more tasks",
+    "noTasksYet": "No tasks yet",
+    "statuses": {
+      "PLANNED": "Planned",
+      "ACTIVE": "Active",
+      "COMPLETED": "Completed",
+      "ARCHIVED": "Archived"
+    },
+    "roles": {
+      "OWNER": "Owner",
+      "ADMIN": "Admin",
+      "MEMBER": "Member",
+      "VIEWER": "Viewer"
+    },
+    "empty": {
+      "title": "No projects yet",
+      "description": "Create your first project to get started"
+    },
+    "filters": {
+      "search": "Search",
+      "searchPlaceholder": "Search by name or description...",
+      "status": "Status",
+      "allStatuses": "All",
+      "sort": "Sort",
+      "sortUpdatedDesc": "Updated (newest)",
+      "sortUpdatedAsc": "Updated (oldest)",
+      "sortNameAsc": "Name (A–Z)",
+      "sortNameDesc": "Name (Z–A)",
+      "sortStartAsc": "Start date (earliest)",
+      "sortStatusAsc": "Status",
+      "apply": "Apply",
+      "reset": "Reset",
+      "statuses": {
+        "PLANNED": "Planned",
+        "ACTIVE": "Active",
+        "COMPLETED": "Completed",
+        "ARCHIVED": "Archived"
+      }
+    },
+    "form": {
+      "createTitle": "Create project",
+      "editTitle": "Edit project",
+      "nameUz": "Name (UZ)",
+      "nameJa": "Name (JA)",
+      "descriptionUz": "Description (UZ)",
+      "descriptionJa": "Description (JA)",
+      "color": "Color",
+      "colorHint": "Choose a color for project cards",
+      "colorPreset": "Color: {color}",
+      "colorCustom": "Choose custom color",
+      "status": "Status",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "create": "Create",
+      "save": "Save",
+      "cancel": "Cancel",
+      "namePlaceholder": "Project name...",
+      "descriptionPlaceholder": "Short description (optional)...",
+      "hint": "Enter to save. More settings on the project page.",
+      "submitting": "Saving...",
+      "success": "Saved",
+      "statuses": {
+        "PLANNED": "Planned",
+        "ACTIVE": "Active",
+        "COMPLETED": "Completed",
+        "ARCHIVED": "Archived"
+      },
+      "errors": {
+        "nameMinLength": "Name must be at least 2 characters",
+        "nameMaxLength": "Name must be 120 characters or less",
+        "descriptionMaxLength": "Description is too long",
+        "colorInvalid": "Enter a valid color code",
+        "endBeforeStart": "End date must be on or after start date",
+        "forbidden": "Permission denied",
+        "notFound": "Project not found",
+        "saveFailed": "Failed to save",
+        "deleteFailed": "Failed to delete"
+      }
+    },
+    "detail": {
+      "start": "Start",
+      "end": "End",
+      "progress": "Progress",
+      "progressStats": "{completed} done · {open} open · {total} total",
+      "members": "Members",
+      "deadlines": "Upcoming deadlines",
+      "tasks": "Tasks",
+      "events": "Calendar events",
+      "noDeadlines": "No deadlines",
+      "noTasks": "No tasks",
+      "noEvents": "No events"
+    }
+  },
+  "tasks": {
+    "title": "Tasks",
+    "description": "Manage tasks across all projects",
+    "createTask": "Create task",
+    "resultCount": "{count} items",
+    "overdue": "Overdue",
+    "priority": "Priority",
+    "priorities": {
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High",
+      "URGENT": "Urgent"
+    },
+    "statuses": {
+      "TODO": "To do",
+      "IN_PROGRESS": "In progress",
+      "REVIEW": "Review",
+      "COMPLETED": "Completed",
+      "CANCELLED": "Cancelled"
+    },
+    "views": {
+      "table": "Table",
+      "card": "Cards",
+      "kanban": "Kanban"
+    },
+    "filters": {
+      "title": "Filters",
+      "search": "Search",
+      "searchPlaceholder": "Title or description",
+      "project": "Project",
+      "subject": "Subject",
+      "assignee": "Assignee",
+      "status": "Status",
+      "priority": "Priority",
+      "tag": "Tag",
+      "sort": "Sort",
+      "allProjects": "All projects",
+      "allSubjects": "All subjects",
+      "allAssignees": "All assignees",
+      "allStatuses": "All statuses",
+      "allPriorities": "All priorities",
+      "allTags": "All tags",
+      "overdueOnly": "Overdue only",
+      "apply": "Apply",
+      "reset": "Reset",
+      "sortCreatedDesc": "Created (newest)",
+      "sortDeadlineAsc": "Deadline (soonest)",
+      "sortDeadlineDesc": "Deadline (latest)",
+      "sortPriorityDesc": "Priority (high first)",
+      "sortStatusAsc": "Status",
+      "sortTitleAsc": "Title"
+    },
+    "pagination": {
+      "pageInfo": "Page {page} of {total}",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "table": {
+      "title": "Title",
+      "project": "Project",
+      "status": "Status",
+      "priority": "Priority",
+      "deadline": "Deadline",
+      "assignee": "Assignee",
+      "actions": "Actions",
+      "edit": "Edit"
+    },
+    "card": {
+      "deadline": "Deadline",
+      "assignee": "Assignee",
+      "openEdit": "Open edit",
+      "openView": "View details"
+    },
+    "kanban": {
+      "emptyColumn": "No tasks",
+      "moved": "Status updated",
+      "addCard": "New task",
+      "addCardSubmit": "Add",
+      "addCardCancel": "Cancel",
+      "cardPlaceholder": "Enter a title or paste a link…",
+      "renameTask": "Rename",
+      "assignMember": "Assign member",
+      "unassign": "Unassign",
+      "dropHere": "Drop here",
+      "columns": {
+        "plan": "Plan",
+        "inProgress": "In progress",
+        "done": "Done"
+      }
+    },
+    "quickAdd": {
+      "trigger": "Add task",
+      "title": "Quick add",
+      "submit": "Add task",
+      "cancel": "Cancel",
+      "taskName": "Task name",
+      "taskNamePlaceholder": "e.g. Review Hiragana",
+      "list": "List",
+      "listPlaceholder": "Select a list",
+      "createList": "Create new list",
+      "newListName": "List name",
+      "newListSubmit": "Create",
+      "labels": "Labels",
+      "labelsHint": "Select one or more labels",
+      "dueDate": "Due date",
+      "dueDateOptional": "Due date (optional)",
+      "hint": "Press Enter to save. Click the card for details."
+    },
+    "detail": {
+      "close": "Close",
+      "cancel": "Cancel",
+      "titlePlaceholder": "Task name",
+      "description": "Description",
+      "descriptionPlaceholder": "Add a detailed description…",
+      "members": "Assignee",
+      "labels": "Labels",
+      "labelsHint": "Click labels to add or remove, then save.",
+      "dates": "Due date",
+      "dueDate": "Due date",
+      "list": "List",
+      "checklist": "Checklist",
+      "addChecklist": "Add checklist",
+      "addChecklistItem": "Add item",
+      "attachments": "Attachments",
+      "addAttachment": "Attach file",
+      "comments": "Comments",
+      "commentPlaceholder": "Write a comment…",
+      "saveComment": "Save",
+      "activity": "Activity",
+      "move": "Move",
+      "otherLanguage": "Other language (optional)",
+      "viewOnly": "View only — you cannot edit",
+      "loading": "Loading…",
+      "checklistTitlePlaceholder": "Checklist title",
+      "noAttachments": "No attachments",
+      "attachmentNamePlaceholder": "File name",
+      "attachmentUrlPlaceholder": "Link (URL)",
+      "activityCreated": "Task created",
+      "quickActions": {
+        "label": "Label",
+        "dueDate": "Due date",
+        "checklist": "Checklist",
+        "attachment": "Attach file",
+        "assignee": "Assignee",
+        "move": "Move"
+      }
+    },
+    "actions": {
+      "menu": "Task actions",
+      "edit": "Edit",
+      "complete": "Mark complete",
+      "reopen": "Reopen",
+      "duplicate": "Duplicate",
+      "archive": "Archive",
+      "archived": "Task archived",
+      "delete": "Delete",
+      "confirmDelete": "Delete this task?",
+      "completed": "Task completed",
+      "reopened": "Task reopened",
+      "duplicated": "Task duplicated",
+      "deleted": "Task deleted"
+    },
+    "quickActions": {
+      "groupLabel": "Quick status change",
+      "start": "In progress",
+      "complete": "Complete",
+      "review": "Review",
+      "backToProgress": "Back to in progress",
+      "reopen": "Reopen",
+      "statusUpdated": "Status updated"
+    },
+    "form": {
+      "createTitle": "Create task",
+      "editTitle": "Edit task",
+      "viewTitle": "Task details",
+      "project": "Project",
+      "projectPlaceholder": "Select project",
+      "titleUz": "Title (Uzbek)",
+      "titleJa": "Title (Japanese)",
+      "descriptionUz": "Description (Uzbek)",
+      "descriptionJa": "Description (Japanese)",
+      "subject": "Subject",
+      "noSubject": "No subject",
+      "assignee": "Assignee",
+      "unassigned": "Unassigned",
+      "status": "Status",
+      "startDate": "Start date",
+      "deadline": "Deadline",
+      "tags": "Tags",
+      "noTags": "No tags",
+      "sections": {
+        "project": "Project",
+        "projectDesc": "Project this task belongs to",
+        "content": "Content",
+        "contentDesc": "Enter in one language, then translate to the other",
+        "details": "Details",
+        "detailsDesc": "Subject, assignee, priority, and status",
+        "schedule": "Schedule",
+        "scheduleDesc": "Start date and deadline",
+        "tagsDesc": "Categorize tasks with tags"
+      },
+      "submitCreate": "Create",
+      "submitUpdate": "Update",
+      "submitting": "Saving...",
+      "created": "Task created",
+      "updated": "Task updated",
+      "errors": {
+        "projectRequired": "Select a project",
+        "titleMinLength": "Title must be at least 2 characters",
+        "titleMaxLength": "Title is too long",
+        "descriptionMaxLength": "Description is too long",
+        "subjectInvalid": "Invalid subject",
+        "assigneeInvalid": "Assignee is not a project member",
+        "tagInvalid": "Invalid tag",
+        "forbidden": "Permission denied",
+        "notFound": "Task not found",
+        "saveFailed": "Failed to save",
+        "deleteFailed": "Failed to delete"
+      }
+    },
+    "library": {
+      "title": "Subjects and tags",
+      "subjectsTab": "Subjects",
+      "tagsTab": "Tags",
+      "createSubject": "Create subject",
+      "createTag": "Create tag",
+      "editSubject": "Edit subject",
+      "editTag": "Edit tag",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "submitting": "Saving...",
+      "created": "Saved",
+      "updated": "Updated",
+      "deleted": "Deleted",
+      "confirmDelete": "Delete this item?",
+      "emptySubjects": "No subjects",
+      "emptyTags": "No tags",
+      "taskCount": "{count} tasks",
+      "nameUz": "Name (Uzbek)",
+      "nameJa": "Name (Japanese)",
+      "color": "Color",
+      "errors": {
+        "nameMinLength": "Name must be at least 2 characters",
+        "nameMaxLength": "Name is too long",
+        "colorInvalid": "Invalid color format",
+        "duplicateName": "This name already exists",
+        "forbidden": "Permission denied",
+        "notFound": "Not found",
+        "saveFailed": "Failed to save",
+        "deleteFailed": "Failed to delete"
+      }
+    },
+    "empty": {
+      "title": "No tasks",
+      "description": "Change filters or create a new task"
+    },
+    "errors": {
+      "forbidden": "Permission denied",
+      "notFound": "Task not found",
+      "saveFailed": "Failed to save",
+      "deleteFailed": "Failed to delete"
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Task, deadline, event, and invitation notifications",
+    "unread": "Unread",
+    "unreadCount": "{count} unread",
+    "listLabel": "Notification list",
+    "totalCount": "{count} total",
+    "allRead": "All read",
+    "markRead": "Mark as read",
+    "markAllRead": "Mark all as read",
+    "delete": "Delete",
+    "readSuccess": "Marked as read",
+    "allReadSuccess": "All marked as read",
+    "deleted": "Notification deleted",
+    "types": {
+      "DEADLINE_REMINDER": "Deadline reminder",
+      "TASK_ASSIGNED": "Task assigned",
+      "TASK_UPDATED": "Task updated",
+      "TASK_COMPLETED": "Task completed",
+      "TASK_OVERDUE": "Overdue task",
+      "PROJECT_INVITATION": "Project invitation",
+      "INVITATION_ACCEPTED": "Invitation accepted",
+      "ROLE_CHANGED": "Role changed",
+      "EVENT_UPCOMING": "Event",
+      "SYSTEM": "System"
+    },
+    "empty": {
+      "title": "No notifications",
+      "description": "New notifications will appear here"
+    }
+  },
+  "calendar": {
+    "title": "Calendar",
+    "description": "View task deadlines and events",
+    "createEvent": "Create event",
+    "quickCreate": {
+      "title": "Create event",
+      "titlePlaceholder": "Event name…",
+      "submit": "Create",
+      "cancel": "Cancel",
+      "hint": "Click an event to edit details."
+    },
+    "overdue": "Overdue",
+    "completed": "Completed",
+    "taskDeadline": "Task deadline",
+    "moved": "Event moved",
+    "resize": "Resize",
+    "empty": "No events in this period",
+    "weekLabel": "Week: {start}",
+    "listLabel": "Next 30 days",
+    "views": {
+      "month": "Month",
+      "week": "Week",
+      "day": "Day",
+      "list": "List"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "today": "Today"
+    },
+    "filters": {
+      "project": "Project",
+      "subject": "Subject",
+      "assignee": "Assignee",
+      "allProjects": "All projects",
+      "allSubjects": "All subjects",
+      "allAssignees": "All assignees",
+      "showCompleted": "Show completed",
+      "hideCompleted": "Hide completed",
+      "reset": "Reset"
+    },
+    "form": {
+      "createTitle": "Create event",
+      "editTitle": "Edit event",
+      "project": "Project",
+      "noProject": "Personal event",
+      "titleUz": "Title (Uzbek)",
+      "titleJa": "Title (Japanese)",
+      "descriptionUz": "Description (Uzbek)",
+      "descriptionJa": "Description (Japanese)",
+      "startAt": "Start",
+      "endAt": "End",
+      "allDay": "All day",
+      "locationUz": "Location (Uzbek)",
+      "locationJa": "Location (Japanese)",
+      "reminders": "Reminders",
+      "reminderOffsets": {
+        "ONE_DAY_BEFORE": "1 day before",
+        "THREE_HOURS_BEFORE": "3 hours before",
+        "ONE_HOUR_BEFORE": "1 hour before",
+        "CUSTOM": "Custom"
+      },
+      "submitCreate": "Create",
+      "submitUpdate": "Update",
+      "submitting": "Saving...",
+      "delete": "Delete",
+      "confirmDelete": "Delete this event?",
+      "created": "Event created",
+      "updated": "Event updated",
+      "deleted": "Event deleted",
+      "errors": {
+        "titleMinLength": "Title must be at least 2 characters",
+        "startRequired": "Start date and time are required",
+        "endRequired": "End date and time are required",
+        "endBeforeStart": "End must be after start",
+        "forbidden": "Permission denied",
+        "notFound": "Event not found",
+        "saveFailed": "Failed to save",
+        "deleteFailed": "Failed to delete"
+      }
+    }
+  },
+  "members": {
+    "leaveProject": "Leave project",
+    "confirmLeave": "Leave this project?",
+    "confirmRemove": "Remove this member?",
+    "removeMember": "Remove member",
+    "changeRole": "Change role",
+    "updatingRole": "Updating role...",
+    "roles": {
+      "OWNER": "Owner",
+      "ADMIN": "Admin",
+      "MEMBER": "Member",
+      "VIEWER": "Viewer"
+    },
+    "invite": {
+      "title": "Invite member",
+      "email": "Email",
+      "emailPlaceholder": "user@example.com",
+      "role": "Role",
+      "submit": "Send invitation",
+      "submitting": "Sending...",
+      "linkReady": "Dev invitation link",
+      "copyLink": "Copy link"
+    },
+    "list": {
+      "title": "Members",
+      "empty": "No members"
+    },
+    "pending": {
+      "title": "Pending invitations",
+      "empty": "No pending invitations",
+      "expires": "Expires",
+      "cancel": "Cancel"
+    },
+    "transfer": {
+      "title": "Transfer ownership",
+      "selectMember": "New owner",
+      "submit": "Transfer ownership",
+      "submitting": "Transferring...",
+      "success": "Ownership transferred",
+      "hint": "You will become an admin after transfer"
+    },
+    "errors": {
+      "forbidden": "Permission denied",
+      "notFound": "Member not found",
+      "cannotLeaveAsOwner": "Owner must transfer ownership before leaving",
+      "memberRequired": "Select a member",
+      "saveFailed": "Operation failed",
+      "emailInvalid": "Enter a valid email address",
+      "roleInvalid": "Invalid role",
+      "alreadyMember": "User is already a member",
+      "duplicateInvitation": "A pending invitation exists for this email",
+      "expired": "Invitation has expired",
+      "invalidToken": "Invalid invitation link",
+      "emailMismatch": "Signed-in email does not match the invitation",
+      "alreadyHandled": "This invitation was already handled"
+    }
+  },
+  "invitations": {
+    "pageTitle": "Project invitation",
+    "pageDescription": "Review the invitation to join or decline",
+    "response": {
+      "title": "Project invitation",
+      "description": "You have been invited to join the following project",
+      "invitedAs": "Role: {role}",
+      "invitedBy": "Invited by: {name}",
+      "invitedEmail": "Invited email: {email}",
+      "accept": "Join",
+      "accepting": "Joining...",
+      "decline": "Decline"
+    },
+    "roles": {
+      "ADMIN": "Admin",
+      "MEMBER": "Member",
+      "VIEWER": "Viewer"
+    },
+    "status": {
+      "ACCEPTED": "This invitation was already accepted",
+      "DECLINED": "This invitation was declined",
+      "EXPIRED": "This invitation has expired",
+      "CANCELLED": "This invitation was cancelled"
+    },
+    "errors": {
+      "emailMismatch": "You are signed in with a different account"
+    }
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "nightMode": "Night mode",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "label": "Language",
+    "ja": "日本語",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "translation": {
+    "translate": "Translate",
+    "translating": "Translating...",
+    "bilingualHint": "Enter in one language → translate → save both",
+    "manualOnlyHint": "Translation API not configured — enter both languages manually",
+    "confirmOverwrite": "The target field already has content. Overwrite?",
+    "errors": {
+      "notConfigured": "Translation service is not configured",
+      "emptySource": "Enter text in one language field to translate",
+      "sameLanguage": "Source and target language are the same",
+      "tooLong": "Text is too long",
+      "rateLimited": "Too many translation requests. Try again later.",
+      "providerError": "Translation failed. Try again later.",
+      "forbidden": "Log in to use translation"
+    }
+  }
+}

@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "title": "Taskora",
+    "description": "Talabalar uchun loyiha, jadval va vazifalar boshqaruv ilovasi"
+  },
+  "common": {
+    "appName": "Taskora",
+    "tagline": "Vazifalar, kalendar va rejalashtirish bir joyda",
+    "loading": "Yuklanmoqda...",
+    "comingSoon": "Bu funksiya keyingi bosqichda qo'shiladi",
+    "placeholderPage": "Vaqtinchalik sahifa",
+    "close": "Yopish",
+    "skipToContent": "Asosiy kontentga o'tish",
+    "tryAgain": "Qayta urinish",
+    "backHome": "Bosh sahifaga qaytish",
+    "backDashboard": "Bugunga"
+  },
+  "errors": {
+    "pageTitle": "Xatolik yuz berdi",
+    "pageDescription": "Kutilmagan muammo yuz berdi. Qayta urinib ko'ring yoki bosh sahifaga qayting.",
+    "globalTitle": "Ilova xatosi",
+    "globalDescription": "Jiddiy xatolik yuz berdi. Sahifani yangilang."
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "description": "Qidirayotgan sahifa mavjud emas yoki ko'chirilgan.",
+    "backHome": "Bosh sahifaga qaytish"
+  },
+  "nav": {
+    "dashboard": "Bugun",
+    "projects": "Loyihalar",
+    "calendar": "Kalendar",
+    "tasks": "Vazifalar",
+    "notifications": "Bildirishnomalar",
+    "profile": "Profil",
+    "login": "Kirish",
+    "register": "Ro'yxatdan o'tish",
+    "logout": "Chiqish",
+    "menu": "Menyu",
+    "openMenu": "Menyuni ochish"
+  },
+  "landing": {
+    "heroTitle": "Talabalar uchun aqlli o'qish boshqaruvi",
+    "heroDescription": "Ko'p loyihalar, muddatlar, ustuvorlik va haftalik/oylik ko'rinishlarni bitta ish maydonida boshqaring.",
+    "getStarted": "Boshlash",
+    "signIn": "Kirish",
+    "features": {
+      "projects": "Ko'p loyihalar va a'zolar",
+      "calendar": "Haftalik va oylik kalendar",
+      "tasks": "Fan, muddat va ustuvorlik",
+      "i18n": "Yapon va o'zbek interfeysi"
+    },
+    "featureDescriptions": {
+      "projects": "Jamoa a'zolarini taklif qiling va bir nechta o'quv loyihalarini boshqaring",
+      "calendar": "Hafta, oy, kun va ro'yxat ko'rinishlarida reja va muddatlar",
+      "tasks": "Fan, ustuvorlik, teglar va kanban bilan vazifalarni tartibga soling",
+      "i18n": "Interfeys va kontent uchun yapon va o'zbek tillari"
+    }
+  },
+  "auth": {
+    "loginTitle": "Kirish",
+    "loginDescription": "Taskora hisobingiz bilan kiring",
+    "registerTitle": "Ro'yxatdan o'tish",
+    "registerDescription": "Yangi Taskora hisobi yarating",
+    "email": "Email",
+    "password": "Parol",
+    "name": "Ism",
+    "confirmPassword": "Parolni tasdiqlash",
+    "preferredLanguage": "Afzal til",
+    "passwordHint": "Kamida 8 belgi, katta va kichik harf hamda raqam bo'lishi kerak",
+    "submitLogin": "Kirish",
+    "submitRegister": "Hisob yaratish",
+    "submittingLogin": "Kirish...",
+    "submittingRegister": "Ro'yxatdan o'tish...",
+    "registrationSuccess": "Hisob yaratildi. Endi tizimga kiring.",
+    "emailPlaceholder": "talaba@example.com",
+    "noAccount": "Hisobingiz yo'qmi?",
+    "hasAccount": "Allaqachon hisobingiz bormi?",
+    "languages": {
+      "ja": "日本語",
+      "uz": "Oʻzbekcha",
+      "en": "English"
+    },
+    "errors": {
+      "emailInvalid": "To'g'ri email manzilini kiriting",
+      "emailTaken": "Bu email allaqachon ro'yxatdan o'tgan",
+      "passwordRequired": "Parolni kiriting",
+      "passwordMinLength": "Parol kamida 8 belgidan iborat bo'lishi kerak",
+      "passwordUppercase": "Parolda katta harf bo'lishi kerak",
+      "passwordLowercase": "Parolda kichik harf bo'lishi kerak",
+      "passwordNumber": "Parolda raqam bo'lishi kerak",
+      "passwordMismatch": "Parollar mos kelmaydi",
+      "confirmPasswordRequired": "Parolni tasdiqlang",
+      "fullNameMinLength": "Ism kamida 2 belgidan iborat bo'lishi kerak",
+      "fullNameMaxLength": "Ism 120 belgidan oshmasligi kerak",
+      "avatarUrlInvalid": "To'g'ri URL kiriting yoki rasm yuklang",
+      "avatarUploadInvalid": "Faqat JPG, PNG, WebP yoki GIF rasm yuklash mumkin",
+      "avatarTooLarge": "Rasm hajmi 2 MB dan oshmasligi kerak",
+      "invalidCredentials": "Email yoki parol noto'g'ri",
+      "registrationFailed": "Ro'yxatdan o'tish amalga oshmadi. Qayta urinib ko'ring",
+      "profileUpdateFailed": "Profilni yangilash amalga oshmadi",
+      "unauthorized": "Tizimga kirish talab qilinadi"
+    }
+  },
+  "profile": {
+    "pageTitle": "Profilingiz",
+    "pageDescription": "Hisob ma'lumotlarini ko'ring va yangilang.",
+    "overview": "Hisob ma'lumotlari",
+    "overviewDescription": "Asosiy profil ma'lumotlari",
+    "editAction": "Tahrirlash",
+    "editTitle": "Profilni tahrirlash",
+    "editDescription": "Ism, til, mavzu va boshqa sozlamalarni yangilang",
+    "avatarUrl": "Avatar URL",
+    "avatarPhoto": "Profil rasmi",
+    "avatarUpload": "Rasm yuklash",
+    "avatarUploading": "Yuklanmoqda...",
+    "avatarUploadSuccess": "Rasm saqlandi",
+    "avatarUploadFailed": "Rasm yuklanmadi. Hajmi 2 MB dan kichik bo'lishi kerak.",
+    "avatarUploadHint": "JPG, PNG, WebP yoki GIF — maksimum 2 MB",
+    "avatarRemove": "Rasmni olib tashlash",
+    "avatarUrlOptional": "Yoki rasm havolasi (ixtiyoriy)",
+    "avatarUrlHint": "Rasm yuklasangiz havola shart emas",
+    "avatarUrlPlaceholder": "https://example.com/avatar.jpg",
+    "theme": "Mavzu",
+    "memberSince": "Ro'yxatdan o'tgan sana",
+    "logoutHint": "Hisobdan chiqish uchun tugmani bosing.",
+    "saveChanges": "O'zgarishlarni saqlash",
+    "saving": "Saqlanmoqda...",
+    "saveSuccess": "Profil yangilandi",
+    "stats": {
+      "projects": "Loyihalar",
+      "tasks": "Jami vazifalar",
+      "completedTasks": "Bajarilgan vazifalar"
+    },
+    "themes": {
+      "light": "Yorug'",
+      "dark": "Qorong'u",
+      "system": "Tizim"
+    }
+  },
+  "pages": {
+    "dashboard": "Bugun",
+    "projects": "Loyihalar",
+    "projectDetail": "Loyiha tafsilotlari",
+    "calendar": "Kalendar",
+    "tasks": "Vazifalar",
+    "notifications": "Bildirishnomalar",
+    "profile": "Profil"
+  },
+  "dashboard": {
+    "title": "Bugun",
+    "description": "Avval o'z vazifalaringiz — keyin kalendar",
+    "greeting": "Salom",
+    "focusHint": "Quyida vazifalar holati bo'yicha tartiblangan. Kartani bosing yoki Kanban oching.",
+    "openKanban": "Kanban ochish",
+    "viewAll": "Hammasini ko'rish",
+    "progress": "Jarayon",
+    "weeklyCompletion": "Haftalik bajarilish",
+    "weeklyStats": "{completed} / {due} bajarildi",
+    "projectMeta": "{tasks} vazifa · {members} a'zo",
+    "stats": {
+      "missedTasks": "Muddati o'tgan",
+      "inProgressTasks": "Jarayonda",
+      "pendingTasks": "Bajarilmagan",
+      "completedTasks": "Bajarilgan"
+    },
+    "sections": {
+      "missedTasks": "Muddati o'tgan",
+      "inProgressTasks": "Jarayonda",
+      "pendingTasks": "Bajarilmagan",
+      "completedTasks": "Bajarilgan",
+      "emptyMissed": "Muddati o'tgan vazifa yo'q",
+      "emptyInProgress": "Jarayondagi vazifa yo'q",
+      "emptyPending": "Rejadagi vazifa yo'q",
+      "emptyCompleted": "Bajarilgan vazifa yo'q",
+      "lists": "Ro'yxatlar",
+      "calendarPreview": "Kalendar",
+      "recentNotifications": "Bildirishnomalar"
+    },
+    "empty": {
+      "todayTasks": "Bugun vazifalar yo'q",
+      "todayTasksHint": "Tez yaratish formasi orqali vazifa qo'shing",
+      "overdueTasks": "Muddati o'tgan vazifalar yo'q",
+      "upcomingDeadlines": "Yaqin muddatlar yo'q",
+      "lists": "Ro'yxatlar yo'q",
+      "listsHint": "Vazifalar sahifasida yangi ro'yxat yarating",
+      "calendarPreview": "Tadbirlar yo'q",
+      "notifications": "Bildirishnomalar yo'q"
+    },
+    "quickTask": {
+      "title": "Tez vazifa yaratish",
+      "project": "Loyiha",
+      "titleUz": "Sarlavha (UZ)",
+      "titleJa": "Sarlavha (JA)",
+      "deadline": "Muddat",
+      "submit": "Vazifa yaratish",
+      "submitting": "Yaratilmoqda...",
+      "success": "Vazifa yaratildi",
+      "noProjects": "Mavjud loyihalar yo'q",
+      "errors": {
+        "forbidden": "Ruxsat yo'q",
+        "saveFailed": "Saqlash amalga oshmadi"
+      }
+    },
+    "quickEvent": {
+      "title": "Tez tadbir yaratish",
+      "project": "Loyiha",
+      "noProject": "Loyihasiz",
+      "titleUz": "Sarlavha (UZ)",
+      "titleJa": "Sarlavha (JA)",
+      "startAt": "Boshlanish",
+      "endAt": "Tugash",
+      "allDay": "Butun kun",
+      "submit": "Tadbir yaratish",
+      "submitting": "Yaratilmoqda...",
+      "success": "Tadbir yaratildi",
+      "errors": {
+        "forbidden": "Ruxsat yo'q",
+        "startRequired": "Boshlanish vaqtini kiriting",
+        "endRequired": "Tugash vaqtini kiriting",
+        "endBeforeStart": "Tugash boshlanishdan keyin bo'lishi kerak",
+        "saveFailed": "Saqlash amalga oshmadi"
+      }
+    }
+  },
+  "projects": {
+    "title": "Loyihalar",
+    "description": "Loyihalarni yaratish, boshqarish va kuzatish",
+    "createProject": "Loyiha yaratish",
+    "editProject": "Tahrirlash",
+    "archiveProject": "Arxivlash",
+    "deleteProject": "O'chirish",
+    "confirmDelete": "Ushbu loyihani o'chirasizmi?",
+    "progress": "Jarayon",
+    "taskCount": "{count} vazifa",
+    "memberCount": "{count} a'zo",
+    "ownerLabel": "Egasi",
+    "openProject": "{name} loyihasini ochish",
+    "viewAllTasks": "Barcha {count} ta vazifani ko'rish",
+    "viewMoreTasks": "Yana {count} ta vazifani ko'rish",
+    "noTasksYet": "Hali vazifalar yo'q",
+    "statuses": {
+      "PLANNED": "Rejalashtirilgan",
+      "ACTIVE": "Faol",
+      "COMPLETED": "Yakunlangan",
+      "ARCHIVED": "Arxivlangan"
+    },
+    "roles": {
+      "OWNER": "Egasi",
+      "ADMIN": "Administrator",
+      "MEMBER": "A'zo",
+      "VIEWER": "Kuzatuvchi"
+    },
+    "empty": {
+      "title": "Loyihalar yo'q",
+      "description": "Birinchi loyihangizni yaratib boshlang"
+    },
+    "filters": {
+      "search": "Qidirish",
+      "searchPlaceholder": "Nom yoki tavsif bo'yicha qidirish...",
+      "status": "Holat",
+      "allStatuses": "Hammasi",
+      "sort": "Saralash",
+      "sortUpdatedDesc": "Yangilangan (yangi)",
+      "sortUpdatedAsc": "Yangilangan (eski)",
+      "sortNameAsc": "Nom (A-Z)",
+      "sortNameDesc": "Nom (Z-A)",
+      "sortStartAsc": "Boshlanish (erta)",
+      "sortStatusAsc": "Holat",
+      "apply": "Qo'llash",
+      "reset": "Tozalash",
+      "statuses": {
+        "PLANNED": "Rejalashtirilgan",
+        "ACTIVE": "Faol",
+        "COMPLETED": "Yakunlangan",
+        "ARCHIVED": "Arxivlangan"
+      }
+    },
+    "form": {
+      "createTitle": "Loyiha yaratish",
+      "editTitle": "Loyihani tahrirlash",
+      "nameUz": "Nom (UZ)",
+      "nameJa": "Nom (JA)",
+      "descriptionUz": "Tavsif (UZ)",
+      "descriptionJa": "Tavsif (JA)",
+      "color": "Rang",
+      "colorHint": "Loyiha kartasida ko'rsatiladigan rangni tanlang",
+      "colorPreset": "Rang: {color}",
+      "colorCustom": "Boshqa rang tanlash",
+      "status": "Holat",
+      "startDate": "Boshlanish sanasi",
+      "endDate": "Tugash sanasi",
+      "create": "Yaratish",
+      "save": "Saqlash",
+      "cancel": "Bekor qilish",
+      "namePlaceholder": "Loyiha nomi...",
+      "descriptionPlaceholder": "Qisqa tavsif (ixtiyoriy)...",
+      "hint": "Enter — saqlash. Batafsil sozlamalar loyiha sahifasida.",
+      "submitting": "Saqlanmoqda...",
+      "success": "Saqlandi",
+      "statuses": {
+        "PLANNED": "Rejalashtirilgan",
+        "ACTIVE": "Faol",
+        "COMPLETED": "Yakunlangan",
+        "ARCHIVED": "Arxivlangan"
+      },
+      "errors": {
+        "nameMinLength": "Nom kamida 2 belgidan iborat bo'lishi kerak",
+        "nameMaxLength": "Nom 120 belgidan oshmasligi kerak",
+        "descriptionMaxLength": "Tavsif juda uzun",
+        "colorInvalid": "To'g'ri rang kodini kiriting",
+        "endBeforeStart": "Tugash sanasi boshlanishdan keyin bo'lishi kerak",
+        "forbidden": "Ruxsat yo'q",
+        "notFound": "Loyiha topilmadi",
+        "saveFailed": "Saqlash amalga oshmadi",
+        "deleteFailed": "O'chirish amalga oshmadi"
+      }
+    },
+    "detail": {
+      "start": "Boshlanish",
+      "end": "Tugash",
+      "progress": "Jarayon",
+      "progressStats": "Bajarilgan {completed} · Ochiq {open} · Jami {total}",
+      "members": "A'zolar",
+      "deadlines": "Yaqin muddatlar",
+      "tasks": "Vazifalar",
+      "events": "Kalendar tadbirlari",
+      "noDeadlines": "Muddatlar yo'q",
+      "noTasks": "Vazifalar yo'q",
+      "noEvents": "Tadbirlar yo'q"
+    }
+  },
+  "tasks": {
+    "title": "Vazifalar",
+    "description": "Vazifalaringizni ro'yxatlar va label'lar bilan boshqaring",
+    "createTask": "Vazifa yaratish",
+    "resultCount": "{count} ta",
+    "overdue": "Muddati o'tgan",
+    "priority": "Ustuvorlik",
+    "priorities": {
+      "LOW": "Past",
+      "MEDIUM": "O'rta",
+      "HIGH": "Yuqori",
+      "URGENT": "Shoshilinch"
+    },
+    "statuses": {
+      "TODO": "Reja",
+      "IN_PROGRESS": "Jarayonda",
+      "REVIEW": "Ko'rib chiqish",
+      "COMPLETED": "Bajarildi",
+      "CANCELLED": "Bekor qilindi"
+    },
+    "views": {
+      "table": "Jadval",
+      "card": "Kartochka",
+      "kanban": "Kanban"
+    },
+    "filters": {
+      "title": "Filtrlar",
+      "search": "Qidirish",
+      "searchPlaceholder": "Sarlavha yoki tavsif",
+      "project": "Loyiha",
+      "subject": "Ro'yxat",
+      "assignee": "Mas'ul",
+      "status": "Status",
+      "priority": "Ustuvorlik",
+      "tag": "Label",
+      "sort": "Saralash",
+      "allProjects": "Barcha loyihalar",
+      "allSubjects": "Barcha ro'yxatlar",
+      "allAssignees": "Barcha ijrochilar",
+      "allStatuses": "Barcha statuslar",
+      "allPriorities": "Barcha ustuvorliklar",
+      "allTags": "Barcha label'lar",
+      "overdueOnly": "Faqat muddati o'tgan",
+      "apply": "Qo'llash",
+      "reset": "Tozalash",
+      "sortCreatedDesc": "Yaratilgan (yangi)",
+      "sortDeadlineAsc": "Muddat (yaqin)",
+      "sortDeadlineDesc": "Muddat (uzoq)",
+      "sortPriorityDesc": "Ustuvorlik (yuqori)",
+      "sortStatusAsc": "Holat",
+      "sortTitleAsc": "Sarlavha"
+    },
+    "pagination": {
+      "pageInfo": "{page} / {total} sahifa",
+      "previous": "Oldingi",
+      "next": "Keyingi"
+    },
+    "table": {
+      "title": "Sarlavha",
+      "project": "Loyiha",
+      "status": "Holat",
+      "priority": "Ustuvorlik",
+      "deadline": "Muddat",
+      "assignee": "Ijrochi",
+      "actions": "Amallar",
+      "edit": "Tahrirlash"
+    },
+    "card": {
+      "deadline": "Muddat",
+      "assignee": "Ijrochi",
+      "openEdit": "Tahrirlash",
+      "openView": "Ko'rish"
+    },
+    "kanban": {
+      "emptyColumn": "Vazifalar yo'q",
+      "moved": "Status yangilandi",
+      "addCard": "Yangi vazifa",
+      "addCardSubmit": "Qo'shish",
+      "addCardCancel": "Bekor qilish",
+      "cardPlaceholder": "Sarlavha kiriting yoki havola qo'shing…",
+      "renameTask": "Nomni o'zgartirish",
+      "assignMember": "A'zoni tayinlash",
+      "unassign": "Tayinlashni olib tashlash",
+      "dropHere": "Bu yerga tashlang",
+      "columns": {
+        "plan": "Reja",
+        "inProgress": "Jarayonda",
+        "done": "Bajarildi"
+      }
+    },
+    "quickAdd": {
+      "trigger": "Vazifa qo'shish",
+      "title": "Tez qo'shish",
+      "submit": "Vazifa qo'shish",
+      "cancel": "Bekor qilish",
+      "taskName": "Vazifa nomi",
+      "taskNamePlaceholder": "Masalan: Hiragana takrorlash",
+      "list": "Ro'yxat",
+      "listPlaceholder": "Ro'yxatni tanlang",
+      "createList": "Yangi ro'yxat yaratish",
+      "newListName": "Ro'yxat nomi",
+      "newListSubmit": "Yaratish",
+      "labels": "Label",
+      "labelsHint": "Bir yoki bir nechta label tanlang",
+      "dueDate": "Muddat",
+      "dueDateOptional": "Muddat (ixtiyoriy)",
+      "hint": "Enter — saqlash. Batafsil ma'lumot uchun kartani bosing."
+    },
+    "detail": {
+      "close": "Yopish",
+      "cancel": "Bekor qilish",
+      "titlePlaceholder": "Vazifa nomi",
+      "description": "Tavsif",
+      "descriptionPlaceholder": "Batafsil tavsif yozing",
+      "members": "Mas'ul",
+      "labels": "Label",
+      "labelsHint": "Label tanlang yoki olib tashlang, keyin saqlang.",
+      "dates": "Muddat",
+      "dueDate": "Muddat",
+      "list": "Ro'yxat",
+      "checklist": "Checklist",
+      "addChecklist": "Checklist qo'shish",
+      "addChecklistItem": "Band qo'shish",
+      "attachments": "Fayllar",
+      "addAttachment": "Fayl biriktirish",
+      "comments": "Izohlar",
+      "commentPlaceholder": "Izoh yozing",
+      "saveComment": "Saqlash",
+      "activity": "Faollik tarixi",
+      "move": "Ko'chirish",
+      "otherLanguage": "Boshqa til (ixtiyoriy)",
+      "viewOnly": "Faqat ko'rish — tahrirlash huquqi yo'q",
+      "loading": "Yuklanmoqda...",
+      "checklistTitlePlaceholder": "Checklist nomi",
+      "noAttachments": "Fayl biriktirilmagan",
+      "attachmentNamePlaceholder": "Fayl nomi",
+      "attachmentUrlPlaceholder": "Havola (URL)",
+      "activityCreated": "Vazifa yaratildi",
+      "quickActions": {
+        "label": "Label",
+        "dueDate": "Muddat",
+        "checklist": "Checklist",
+        "attachment": "Fayl biriktirish",
+        "assignee": "Mas'ul",
+        "move": "Ko'chirish"
+      }
+    },
+    "actions": {
+      "menu": "Vazifa amallari",
+      "edit": "Tahrirlash",
+      "complete": "Bajarildi deb belgilash",
+      "reopen": "Qayta ochish",
+      "duplicate": "Nusxalash",
+      "archive": "Arxivlash",
+      "archived": "Vazifa arxivlandi",
+      "delete": "O'chirish",
+      "confirmDelete": "Ushbu vazifani o'chirasizmi?",
+      "completed": "Vazifa bajarildi",
+      "reopened": "Vazifa qayta ochildi",
+      "duplicated": "Vazifa nusxalandi",
+      "deleted": "Vazifa o'chirildi"
+    },
+    "quickActions": {
+      "groupLabel": "Holatni tez o'zgartirish",
+      "start": "Jarayonda",
+      "complete": "Bajarildi",
+      "review": "Ko'rib chiqish",
+      "backToProgress": "Jarayonga",
+      "reopen": "Qayta ochish",
+      "statusUpdated": "Holat yangilandi"
+    },
+    "form": {
+      "createTitle": "Vazifa yaratish",
+      "editTitle": "Vazifani tahrirlash",
+      "viewTitle": "Vazifa tafsilotlari",
+      "project": "Loyiha",
+      "projectPlaceholder": "Loyihani tanlang",
+      "titleUz": "Sarlavha (o'zbekcha)",
+      "titleJa": "Sarlavha (yaponcha)",
+      "descriptionUz": "Tavsif (o'zbekcha)",
+      "descriptionJa": "Tavsif (yaponcha)",
+      "subject": "Fan",
+      "noSubject": "Fan yo'q",
+      "assignee": "Ijrochi",
+      "unassigned": "Tayinlanmagan",
+      "status": "Holat",
+      "startDate": "Boshlanish sanasi",
+      "deadline": "Muddat",
+      "tags": "Teglar",
+      "noTags": "Teglar yo'q",
+      "sections": {
+        "project": "Loyiha",
+        "projectDesc": "Vazifa qaysi loyihaga tegishli",
+        "content": "Matn",
+        "contentDesc": "Avval bitta tilga yozing, keyin Tarjima qilish tugmasini bosing",
+        "details": "Tafsilotlar",
+        "detailsDesc": "Fan, ijrochi, ustuvorlik va holat",
+        "schedule": "Muddat",
+        "scheduleDesc": "Boshlanish va tugash sanasi",
+        "tagsDesc": "Vazifani teglar bilan guruhlang"
+      },
+      "submitCreate": "Yaratish",
+      "submitUpdate": "Yangilash",
+      "submitting": "Saqlanmoqda...",
+      "created": "Vazifa yaratildi",
+      "updated": "Vazifa yangilandi",
+      "errors": {
+        "projectRequired": "Loyihani tanlang",
+        "titleMinLength": "Sarlavha kamida 2 belgidan iborat bo'lishi kerak",
+        "titleMaxLength": "Sarlavha juda uzun",
+        "descriptionMaxLength": "Tavsif juda uzun",
+        "subjectInvalid": "Fan noto'g'ri",
+        "assigneeInvalid": "Ijrochi loyiha a'zosi emas",
+        "tagInvalid": "Teg noto'g'ri",
+        "forbidden": "Ruxsat yo'q",
+        "notFound": "Vazifa topilmadi",
+        "saveFailed": "Saqlash muvaffaqiyatsiz",
+        "deleteFailed": "O'chirish muvaffaqiyatsiz"
+      }
+    },
+    "library": {
+      "title": "Ro'yxatlar va label'lar",
+      "subjectsTab": "Ro'yxatlar",
+      "tagsTab": "Label'lar",
+      "createSubject": "Ro'yxat yaratish",
+      "createTag": "Label yaratish",
+      "editSubject": "Ro'yxatni tahrirlash",
+      "editTag": "Labelni tahrirlash",
+      "edit": "Tahrirlash",
+      "delete": "O'chirish",
+      "save": "Saqlash",
+      "submitting": "Saqlanmoqda...",
+      "created": "Saqlandi",
+      "updated": "Yangilandi",
+      "deleted": "O'chirildi",
+      "confirmDelete": "O'chirasizmi?",
+      "emptySubjects": "Ro'yxatlar yo'q",
+      "emptyTags": "Label'lar yo'q",
+      "taskCount": "{count} vazifa",
+      "nameUz": "Nom (o'zbekcha)",
+      "nameJa": "Nom (yaponcha)",
+      "color": "Rang",
+      "errors": {
+        "nameMinLength": "Nom kamida 2 belgidan iborat bo'lishi kerak",
+        "nameMaxLength": "Nom juda uzun",
+        "colorInvalid": "Rang formati noto'g'ri",
+        "duplicateName": "Bunday nom allaqachon mavjud",
+        "forbidden": "Ruxsat yo'q",
+        "notFound": "Topilmadi",
+        "saveFailed": "Saqlash muvaffaqiyatsiz",
+        "deleteFailed": "O'chirish muvaffaqiyatsiz"
+      }
+    },
+    "empty": {
+      "title": "Vazifalar yo'q",
+      "description": "Filtrlarni o'zgartiring yoki yangi vazifa yarating"
+    },
+    "errors": {
+      "forbidden": "Ruxsat yo'q",
+      "notFound": "Vazifa topilmadi",
+      "saveFailed": "Saqlash muvaffaqiyatsiz",
+      "deleteFailed": "O'chirish muvaffaqiyatsiz"
+    }
+  },
+  "notifications": {
+    "title": "Bildirishnomalar",
+    "description": "Vazifa, muddat, tadbir va taklif bildirishnomalari",
+    "unread": "O'qilmagan",
+    "unreadCount": "O'qilmagan: {count}",
+    "listLabel": "Bildirishnomalar",
+    "totalCount": "{count} ta",
+    "allRead": "Hammasi o'qilgan",
+    "markRead": "O'qilgan deb belgilash",
+    "markAllRead": "Hammasini o'qilgan",
+    "delete": "O'chirish",
+    "readSuccess": "O'qilgan deb belgilandi",
+    "allReadSuccess": "Hammasi o'qilgan deb belgilandi",
+    "deleted": "Bildirishnoma o'chirildi",
+    "types": {
+      "DEADLINE_REMINDER": "Muddat eslatmasi",
+      "TASK_ASSIGNED": "Vazifa tayinlandi",
+      "TASK_UPDATED": "Vazifa yangilandi",
+      "TASK_COMPLETED": "Vazifa bajarildi",
+      "TASK_OVERDUE": "Muddat o'tdi",
+      "PROJECT_INVITATION": "Loyiha taklifi",
+      "INVITATION_ACCEPTED": "Taklif qabul qilindi",
+      "ROLE_CHANGED": "Rol o'zgartirildi",
+      "EVENT_UPCOMING": "Tadbir",
+      "SYSTEM": "Tizim"
+    },
+    "empty": {
+      "title": "Bildirishnomalar yo'q",
+      "description": "Yangi bildirishnomalar shu yerda ko'rinadi"
+    }
+  },
+  "calendar": {
+    "title": "Kalendar",
+    "description": "Vazifa muddatlari va tadbirlarni ko'ring",
+    "createEvent": "Tadbir yaratish",
+    "quickCreate": {
+      "title": "Tadbir yaratish",
+      "titlePlaceholder": "Tadbir nomi…",
+      "submit": "Yaratish",
+      "cancel": "Bekor qilish",
+      "hint": "Batafsil ma'lumot uchun tadbirni bosing."
+    },
+    "overdue": "Muddati o'tgan",
+    "completed": "Bajarildi",
+    "taskDeadline": "Vazifa muddati",
+    "moved": "Tadbir ko'chirildi",
+    "resize": "O'lchamni o'zgartirish",
+    "empty": "Bu davrda reja yo'q",
+    "weekLabel": "Hafta: {start}",
+    "listLabel": "Keyingi 30 kun",
+    "views": {
+      "month": "Oy",
+      "week": "Hafta",
+      "day": "Kun",
+      "list": "Ro'yxat"
+    },
+    "navigation": {
+      "previous": "Oldingi",
+      "next": "Keyingi",
+      "today": "Bugun"
+    },
+    "filters": {
+      "project": "Loyiha",
+      "subject": "Fan",
+      "assignee": "Ijrochi",
+      "allProjects": "Barcha loyihalar",
+      "allSubjects": "Barcha fanlar",
+      "allAssignees": "Barcha ijrochilar",
+      "showCompleted": "Bajarilganlarni ko'rsatish",
+      "hideCompleted": "Bajarilganlarni yashirish",
+      "reset": "Tozalash"
+    },
+    "form": {
+      "createTitle": "Tadbir yaratish",
+      "editTitle": "Tadbirni tahrirlash",
+      "project": "Loyiha",
+      "noProject": "Shaxsiy tadbir",
+      "titleUz": "Sarlavha (o'zbekcha)",
+      "titleJa": "Sarlavha (yaponcha)",
+      "descriptionUz": "Tavsif (o'zbekcha)",
+      "descriptionJa": "Tavsif (yaponcha)",
+      "startAt": "Boshlanish",
+      "endAt": "Tugash",
+      "allDay": "Butun kun",
+      "locationUz": "Joy (o'zbekcha)",
+      "locationJa": "Joy (yaponcha)",
+      "reminders": "Eslatmalar",
+      "reminderOffsets": {
+        "ONE_DAY_BEFORE": "1 kun oldin",
+        "THREE_HOURS_BEFORE": "3 soat oldin",
+        "ONE_HOUR_BEFORE": "1 soat oldin",
+        "CUSTOM": "Maxsus"
+      },
+      "submitCreate": "Yaratish",
+      "submitUpdate": "Yangilash",
+      "submitting": "Saqlanmoqda...",
+      "delete": "O'chirish",
+      "confirmDelete": "Ushbu tadbirni o'chirasizmi?",
+      "created": "Tadbir yaratildi",
+      "updated": "Tadbir yangilandi",
+      "deleted": "Tadbir o'chirildi",
+      "errors": {
+        "titleMinLength": "Sarlavha kamida 2 belgidan iborat bo'lishi kerak",
+        "startRequired": "Boshlanish vaqtini kiriting",
+        "endRequired": "Tugash vaqtini kiriting",
+        "endBeforeStart": "Tugash boshlanishdan keyin bo'lishi kerak",
+        "forbidden": "Ruxsat yo'q",
+        "notFound": "Tadbir topilmadi",
+        "saveFailed": "Saqlash muvaffaqiyatsiz",
+        "deleteFailed": "O'chirish muvaffaqiyatsiz"
+      }
+    }
+  },
+  "members": {
+    "leaveProject": "Loyihadan chiqish",
+    "confirmLeave": "Ushbu loyihadan chiqmoqchimisiz?",
+    "confirmRemove": "Ushbu a'zoni olib tashlaysizmi?",
+    "removeMember": "A'zoni olib tashlash",
+    "changeRole": "Rolni o'zgartirish",
+    "updatingRole": "Rol yangilanmoqda...",
+    "roles": {
+      "OWNER": "Egasi",
+      "ADMIN": "Administrator",
+      "MEMBER": "A'zo",
+      "VIEWER": "Kuzatuvchi"
+    },
+    "invite": {
+      "title": "A'zoni taklif qilish",
+      "email": "Email",
+      "emailPlaceholder": "user@example.com",
+      "role": "Rol",
+      "submit": "Taklif yuborish",
+      "submitting": "Yuborilmoqda...",
+      "linkReady": "Ishlab chiqish uchun taklif havolasi",
+      "copyLink": "Havolani nusxalash"
+    },
+    "list": {
+      "title": "A'zolar",
+      "empty": "A'zolar yo'q"
+    },
+    "pending": {
+      "title": "Kutilayotgan takliflar",
+      "empty": "Kutilayotgan takliflar yo'q",
+      "expires": "Amal qilish muddati",
+      "cancel": "Bekor qilish"
+    },
+    "transfer": {
+      "title": "Egalik huquqini topshirish",
+      "selectMember": "Yangi egasi",
+      "submit": "Egalikni topshirish",
+      "submitting": "Topshirilmoqda...",
+      "success": "Egalik huquqi topshirildi",
+      "hint": "Topshirgandan so'ng siz administrator bo'lasiz"
+    },
+    "errors": {
+      "forbidden": "Ruxsat yo'q",
+      "notFound": "A'zo topilmadi",
+      "cannotLeaveAsOwner": "Egasi topshirilmaguncha chiqib bo'lmaydi",
+      "memberRequired": "A'zoni tanlang",
+      "saveFailed": "Amal bajarilmadi",
+      "emailInvalid": "To'g'ri email kiriting",
+      "roleInvalid": "Noto'g'ri rol",
+      "alreadyMember": "Bu foydalanuvchi allaqachon a'zo",
+      "duplicateInvitation": "Bu email uchun faol taklif mavjud",
+      "expired": "Taklif muddati tugagan",
+      "invalidToken": "Noto'g'ri taklif havolasi",
+      "emailMismatch": "Taklif emaili hisobingiz bilan mos kelmaydi",
+      "alreadyHandled": "Bu taklif allaqachon ko'rib chiqilgan"
+    }
+  },
+  "invitations": {
+    "pageTitle": "Loyiha taklifi",
+    "pageDescription": "Taklifni ko'rib chiqing va qo'shiling yoki rad eting",
+    "response": {
+      "title": "Loyiha taklifi",
+      "description": "Siz quyidagi loyihaga taklif qilindingiz",
+      "invitedAs": "Rol: {role}",
+      "invitedBy": "Taklif qilgan: {name}",
+      "invitedEmail": "Taklif emaili: {email}",
+      "accept": "Qabul qilish",
+      "accepting": "Qabul qilinmoqda...",
+      "decline": "Rad etish"
+    },
+    "roles": {
+      "ADMIN": "Administrator",
+      "MEMBER": "A'zo",
+      "VIEWER": "Kuzatuvchi"
+    },
+    "status": {
+      "ACCEPTED": "Bu taklif allaqachon qabul qilingan",
+      "DECLINED": "Bu taklif rad etilgan",
+      "EXPIRED": "Bu taklif muddati tugagan",
+      "CANCELLED": "Bu taklif bekor qilingan"
+    },
+    "errors": {
+      "emailMismatch": "Boshqa hisob bilan kirdingiz"
+    }
+  },
+  "theme": {
+    "toggle": "Mavzuni almashtirish",
+    "nightMode": "Tungi rejim",
+    "light": "Yorug'",
+    "dark": "Qorong'u",
+    "system": "Tizim"
+  },
+  "locale": {
+    "label": "Til",
+    "ja": "日本語",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "translation": {
+    "translate": "Tarjima qilish",
+    "translating": "Tarjima qilinmoqda...",
+    "bilingualHint": "Bir tilga yozing → Tarjima → ikkala til saqlanadi",
+    "manualOnlyHint": "Tarjima API yo'q — har ikkala tilni qo'lda kiriting",
+    "confirmOverwrite": "Tarjima maydonida allaqachon matn bor. Ustiga yozilsinmi?",
+    "errors": {
+      "notConfigured": "Tarjima xizmati sozlanmagan",
+      "emptySource": "Tarjima qilish uchun matnni bitta til maydoniga kiriting",
+      "sameLanguage": "Manba va maqsad tillar bir xil",
+      "tooLong": "Matn juda uzun",
+      "rateLimited": "Juda ko'p tarjima so'rovi. Biroz kutib qayta urinib ko'ring",
+      "providerError": "Tarjima amalga oshmadi. Keyinroq qayta urinib ko'ring",
+      "forbidden": "Tarjima qilish uchun tizimga kiring"
+    }
+  }
+}

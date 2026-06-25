@@ -1,0 +1,824 @@
+{
+  "metadata": {
+    "title": "Taskora",
+    "description": "学生向けプロジェクト・スケジュール・タスク管理アプリ"
+  },
+  "common": {
+    "appName": "Taskora",
+    "tagline": "プロジェクト、カレンダー、タスクを一つに",
+    "loading": "読み込み中...",
+    "comingSoon": "この機能は次のフェーズで実装されます",
+    "placeholderPage": "プレースホルダーページ",
+    "close": "閉じる",
+    "skipToContent": "メインコンテンツへスキップ",
+    "tryAgain": "再試行",
+    "backHome": "ホームへ戻る",
+    "backDashboard": "ダッシュボードへ"
+  },
+  "errors": {
+    "pageTitle": "エラーが発生しました",
+    "pageDescription": "予期しない問題が発生しました。再試行するか、ホームに戻ってください。",
+    "globalTitle": "アプリケーションエラー",
+    "globalDescription": "重大なエラーが発生しました。ページを再読み込みしてください。"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しないか、移動した可能性があります。",
+    "backHome": "ホームへ戻る"
+  },
+  "nav": {
+    "dashboard": "今日",
+    "projects": "プロジェクト",
+    "calendar": "カレンダー",
+    "tasks": "タスク",
+    "notifications": "通知",
+    "profile": "プロフィール",
+    "login": "ログイン",
+    "register": "新規登録",
+    "logout": "ログアウト",
+    "menu": "メニュー",
+    "openMenu": "メニューを開く"
+  },
+  "landing": {
+    "heroTitle": "学生のためのスマートな学習管理",
+    "heroDescription": "複数プロジェクト、締切、優先度、週次・月次ビューを一つのワークスペースで管理します。",
+    "getStarted": "始める",
+    "signIn": "ログイン",
+    "features": {
+      "projects": "複数プロジェクトとメンバー",
+      "calendar": "週次・月次カレンダー",
+      "tasks": "科目・締切・優先度",
+      "i18n": "日本語・ウズベク語インターフェース"
+    },
+    "featureDescriptions": {
+      "projects": "チームメンバーを招待し、複数の学習プロジェクトを並行管理",
+      "calendar": "週・月・日・リスト表示で予定と締切を俯瞰",
+      "tasks": "科目、優先度、タグ、カンバンでタスクを整理",
+      "i18n": "UIとコンテンツの両方で日本語・ウズベク語に対応"
+    }
+  },
+  "auth": {
+    "loginTitle": "ログイン",
+    "loginDescription": "Taskora アカウントでサインイン",
+    "registerTitle": "新規登録",
+    "registerDescription": "新しい Taskora アカウントを作成",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "name": "氏名",
+    "confirmPassword": "パスワード（確認）",
+    "preferredLanguage": "優先言語",
+    "passwordHint": "8文字以上、大文字・小文字・数字を含めてください",
+    "submitLogin": "ログイン",
+    "submitRegister": "アカウント作成",
+    "submittingLogin": "ログイン中...",
+    "submittingRegister": "登録中...",
+    "registrationSuccess": "アカウントが作成されました。ログインしてください。",
+    "emailPlaceholder": "student@example.com",
+    "noAccount": "アカウントをお持ちでないですか？",
+    "hasAccount": "すでにアカウントをお持ちですか？",
+    "languages": {
+      "ja": "日本語",
+      "uz": "Oʻzbekcha",
+      "en": "English"
+    },
+    "errors": {
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "emailTaken": "このメールアドレスは既に登録されています",
+      "passwordRequired": "パスワードを入力してください",
+      "passwordMinLength": "パスワードは8文字以上必要です",
+      "passwordUppercase": "パスワードに大文字を含めてください",
+      "passwordLowercase": "パスワードに小文字を含めてください",
+      "passwordNumber": "パスワードに数字を含めてください",
+      "passwordMismatch": "パスワードが一致しません",
+      "confirmPasswordRequired": "パスワード確認を入力してください",
+      "fullNameMinLength": "氏名は2文字以上必要です",
+      "fullNameMaxLength": "氏名は120文字以内にしてください",
+      "avatarUrlInvalid": "正しいURLを入力するか、画像をアップロードしてください",
+      "avatarUploadInvalid": "JPG、PNG、WebP、GIFのみアップロードできます",
+      "avatarTooLarge": "画像サイズは2MB以下にしてください",
+      "invalidCredentials": "メールアドレスまたはパスワードが正しくありません",
+      "registrationFailed": "登録に失敗しました。もう一度お試しください",
+      "profileUpdateFailed": "プロフィールの更新に失敗しました",
+      "unauthorized": "ログインが必要です"
+    }
+  },
+  "profile": {
+    "pageTitle": "マイプロフィール",
+    "pageDescription": "アカウント情報の確認と更新",
+    "overview": "アカウント情報",
+    "overviewDescription": "基本プロフィール情報",
+    "editAction": "編集",
+    "editTitle": "プロフィール編集",
+    "editDescription": "表示名、言語、テーマなどを更新できます",
+    "avatarUrl": "アバターURL",
+    "avatarPhoto": "プロフィール写真",
+    "avatarUpload": "写真をアップロード",
+    "avatarUploading": "アップロード中...",
+    "avatarUploadSuccess": "写真を保存しました",
+    "avatarUploadFailed": "写真をアップロードできませんでした。2MB以下の画像を選んでください。",
+    "avatarUploadHint": "JPG、PNG、WebP、GIF — 最大2MB",
+    "avatarRemove": "写真を削除",
+    "avatarUrlOptional": "または画像URL（任意）",
+    "avatarUrlHint": "写真をアップロードする場合、URLは不要です",
+    "avatarUrlPlaceholder": "https://example.com/avatar.jpg",
+    "theme": "テーマ",
+    "memberSince": "登録日",
+    "logoutHint": "アカウントからログアウトするにはボタンを押してください。",
+    "saveChanges": "変更を保存",
+    "saving": "保存中...",
+    "saveSuccess": "プロフィールを更新しました",
+    "stats": {
+      "projects": "プロジェクト",
+      "tasks": "タスク合計",
+      "completedTasks": "完了タスク"
+    },
+    "themes": {
+      "light": "ライト",
+      "dark": "ダーク",
+      "system": "システム"
+    }
+  },
+  "pages": {
+    "dashboard": "今日",
+    "projects": "プロジェクト",
+    "projectDetail": "プロジェクト詳細",
+    "calendar": "カレンダー",
+    "tasks": "タスク",
+    "notifications": "通知",
+    "profile": "プロフィール"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "description": "まず自分のタスク — その後プロジェクトとカレンダー",
+    "greeting": "こんにちは",
+    "focusHint": "下はステータス別のタスク一覧です。カードをクリックするかカンバンを開いてください。",
+    "openKanban": "カンバンを開く",
+    "viewAll": "すべて表示",
+    "progress": "進捗",
+    "weeklyCompletion": "今週の達成率",
+    "weeklyStats": "{completed} / {due} 件完了",
+    "projectMeta": "{tasks} タスク · {members} メンバー",
+    "stats": {
+      "missedTasks": "期限切れ",
+      "inProgressTasks": "進行中",
+      "pendingTasks": "未着手",
+      "completedTasks": "完了"
+    },
+    "sections": {
+      "missedTasks": "期限切れ",
+      "inProgressTasks": "進行中",
+      "pendingTasks": "未着手",
+      "completedTasks": "完了",
+      "emptyMissed": "期限切れタスクはありません",
+      "emptyInProgress": "進行中タスクはありません",
+      "emptyPending": "未着手タスクはありません",
+      "emptyCompleted": "完了タスクはありません",
+      "lists": "リスト",
+      "calendarPreview": "カレンダー",
+      "recentNotifications": "通知"
+    },
+    "empty": {
+      "todayTasks": "今日のタスクはありません",
+      "todayTasksHint": "クイック作成フォームからタスクを追加できます",
+      "overdueTasks": "期限切れタスクはありません",
+      "upcomingDeadlines": "近日の締切はありません",
+      "lists": "リストがありません",
+      "listsHint": "タスクページで新しいリストを作成してください",
+      "calendarPreview": "予定がありません",
+      "notifications": "通知はありません"
+    },
+    "quickTask": {
+      "title": "クイックタスク作成",
+      "project": "プロジェクト",
+      "titleUz": "タイトル (UZ)",
+      "titleJa": "タイトル (JA)",
+      "deadline": "締切",
+      "submit": "タスクを作成",
+      "submitting": "作成中...",
+      "success": "タスクを作成しました",
+      "noProjects": "利用可能なプロジェクトがありません",
+      "errors": {
+        "forbidden": "権限がありません",
+        "saveFailed": "保存に失敗しました"
+      }
+    },
+    "quickEvent": {
+      "title": "クイックイベント作成",
+      "project": "プロジェクト",
+      "noProject": "プロジェクトなし",
+      "titleUz": "タイトル (UZ)",
+      "titleJa": "タイトル (JA)",
+      "startAt": "開始",
+      "endAt": "終了",
+      "allDay": "終日",
+      "submit": "イベントを作成",
+      "submitting": "作成中...",
+      "success": "イベントを作成しました",
+      "errors": {
+        "forbidden": "権限がありません",
+        "startRequired": "開始日時を入力してください",
+        "endRequired": "終了日時を入力してください",
+        "endBeforeStart": "終了は開始より後にしてください",
+        "saveFailed": "保存に失敗しました"
+      }
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "description": "プロジェクトの作成、管理、進捗確認",
+    "createProject": "プロジェクト作成",
+    "editProject": "編集",
+    "archiveProject": "アーカイブ",
+    "deleteProject": "削除",
+    "confirmDelete": "このプロジェクトを削除しますか？",
+    "progress": "進捗",
+    "taskCount": "{count} タスク",
+    "memberCount": "{count} メンバー",
+    "ownerLabel": "オーナー",
+    "openProject": "{name} プロジェクトを開く",
+    "viewAllTasks": "全 {count} 件のタスクを見る",
+    "viewMoreTasks": "あと {count} 件のタスクを見る",
+    "noTasksYet": "タスクはまだありません",
+    "statuses": {
+      "PLANNED": "計画中",
+      "ACTIVE": "進行中",
+      "COMPLETED": "完了",
+      "ARCHIVED": "アーカイブ"
+    },
+    "roles": {
+      "OWNER": "オーナー",
+      "ADMIN": "管理者",
+      "MEMBER": "メンバー",
+      "VIEWER": "閲覧者"
+    },
+    "empty": {
+      "title": "プロジェクトがありません",
+      "description": "最初のプロジェクトを作成して始めましょう"
+    },
+    "filters": {
+      "search": "検索",
+      "searchPlaceholder": "名前や説明で検索...",
+      "status": "ステータス",
+      "allStatuses": "すべて",
+      "sort": "並び替え",
+      "sortUpdatedDesc": "更新日（新しい順）",
+      "sortUpdatedAsc": "更新日（古い順）",
+      "sortNameAsc": "名前（A-Z）",
+      "sortNameDesc": "名前（Z-A）",
+      "sortStartAsc": "開始日（早い順）",
+      "sortStatusAsc": "ステータス",
+      "apply": "適用",
+      "reset": "リセット",
+      "statuses": {
+        "PLANNED": "計画中",
+        "ACTIVE": "進行中",
+        "COMPLETED": "完了",
+        "ARCHIVED": "アーカイブ"
+      }
+    },
+    "form": {
+      "createTitle": "プロジェクト作成",
+      "editTitle": "プロジェクト編集",
+      "nameUz": "名前 (UZ)",
+      "nameJa": "名前 (JA)",
+      "descriptionUz": "説明 (UZ)",
+      "descriptionJa": "説明 (JA)",
+      "color": "カラー",
+      "colorHint": "プロジェクトカードに表示する色を選んでください",
+      "colorPreset": "色: {color}",
+      "colorCustom": "カスタム色を選ぶ",
+      "status": "ステータス",
+      "startDate": "開始日",
+      "endDate": "終了日",
+      "create": "作成",
+      "save": "保存",
+      "cancel": "キャンセル",
+      "namePlaceholder": "プロジェクト名...",
+      "descriptionPlaceholder": "短い説明（任意）...",
+      "hint": "Enter — 保存。詳細設定はプロジェクトページで。",
+      "submitting": "保存中...",
+      "success": "保存しました",
+      "statuses": {
+        "PLANNED": "計画中",
+        "ACTIVE": "進行中",
+        "COMPLETED": "完了",
+        "ARCHIVED": "アーカイブ"
+      },
+      "errors": {
+        "nameMinLength": "名前は2文字以上必要です",
+        "nameMaxLength": "名前は120文字以内にしてください",
+        "descriptionMaxLength": "説明が長すぎます",
+        "colorInvalid": "有効なカラーコードを入力してください",
+        "endBeforeStart": "終了日は開始日以降にしてください",
+        "forbidden": "権限がありません",
+        "notFound": "プロジェクトが見つかりません",
+        "saveFailed": "保存に失敗しました",
+        "deleteFailed": "削除に失敗しました"
+      }
+    },
+    "detail": {
+      "start": "開始",
+      "end": "終了",
+      "progress": "進捗",
+      "progressStats": "完了 {completed} · 未完了 {open} · 合計 {total}",
+      "members": "メンバー",
+      "deadlines": "近日の締切",
+      "tasks": "タスク",
+      "events": "カレンダーイベント",
+      "noDeadlines": "締切がありません",
+      "noTasks": "タスクがありません",
+      "noEvents": "イベントがありません"
+    }
+  },
+  "tasks": {
+    "title": "タスク",
+    "description": "プロジェクト横断でタスクを管理します",
+    "createTask": "タスクを作成",
+    "resultCount": "{count} 件",
+    "overdue": "期限切れ",
+    "priority": "優先度",
+    "priorities": {
+      "LOW": "低",
+      "MEDIUM": "中",
+      "HIGH": "高",
+      "URGENT": "緊急"
+    },
+    "statuses": {
+      "TODO": "未着手",
+      "IN_PROGRESS": "進行中",
+      "REVIEW": "レビュー",
+      "COMPLETED": "完了",
+      "CANCELLED": "キャンセル"
+    },
+    "views": {
+      "table": "テーブル",
+      "card": "カード",
+      "kanban": "カンバン"
+    },
+    "filters": {
+      "title": "フィルター",
+      "search": "検索",
+      "searchPlaceholder": "タイトルまたは説明",
+      "project": "プロジェクト",
+      "subject": "科目",
+      "assignee": "担当者",
+      "status": "ステータス",
+      "priority": "優先度",
+      "tag": "タグ",
+      "sort": "並び替え",
+      "allProjects": "すべてのプロジェクト",
+      "allSubjects": "すべての科目",
+      "allAssignees": "すべての担当者",
+      "allStatuses": "すべてのステータス",
+      "allPriorities": "すべての優先度",
+      "allTags": "すべてのタグ",
+      "overdueOnly": "期限切れのみ",
+      "apply": "適用",
+      "reset": "リセット",
+      "sortCreatedDesc": "作成日（新しい順）",
+      "sortDeadlineAsc": "締切（近い順）",
+      "sortDeadlineDesc": "締切（遠い順）",
+      "sortPriorityDesc": "優先度（高い順）",
+      "sortStatusAsc": "ステータス",
+      "sortTitleAsc": "タイトル"
+    },
+    "pagination": {
+      "pageInfo": "{page} / {total} ページ",
+      "previous": "前へ",
+      "next": "次へ"
+    },
+    "table": {
+      "title": "タイトル",
+      "project": "プロジェクト",
+      "status": "ステータス",
+      "priority": "優先度",
+      "deadline": "締切",
+      "assignee": "担当者",
+      "actions": "操作",
+      "edit": "編集"
+    },
+    "card": {
+      "deadline": "締切",
+      "assignee": "担当者",
+      "openEdit": "編集を開く",
+      "openView": "詳細を見る"
+    },
+    "kanban": {
+      "emptyColumn": "タスクなし",
+      "moved": "ステータスを更新しました",
+      "addCard": "新しいタスク",
+      "addCardSubmit": "追加",
+      "addCardCancel": "キャンセル",
+      "cardPlaceholder": "タイトルを入力、またはリンクを貼り付け…",
+      "renameTask": "名前を変更",
+      "assignMember": "担当者を割り当て",
+      "unassign": "担当を外す",
+      "dropHere": "ここにドロップ",
+      "columns": {
+        "plan": "予定",
+        "inProgress": "進行中",
+        "done": "完了"
+      }
+    },
+    "quickAdd": {
+      "trigger": "タスクを追加",
+      "title": "クイック追加",
+      "submit": "タスクを追加",
+      "cancel": "キャンセル",
+      "taskName": "タスク名",
+      "taskNamePlaceholder": "例: ひらがな復習",
+      "list": "リスト",
+      "listPlaceholder": "リストを選択",
+      "createList": "新しいリストを作成",
+      "newListName": "リスト名",
+      "newListSubmit": "作成",
+      "labels": "ラベル",
+      "labelsHint": "1つ以上のラベルを選択",
+      "dueDate": "期限",
+      "dueDateOptional": "期限（任意）",
+      "hint": "Enterで保存。詳細はカードをクリック。"
+    },
+    "detail": {
+      "close": "閉じる",
+      "cancel": "キャンセル",
+      "titlePlaceholder": "タスク名",
+      "description": "説明",
+      "descriptionPlaceholder": "詳しい説明を追加…",
+      "members": "担当者",
+      "labels": "ラベル",
+      "labelsHint": "ラベルをクリックして追加・解除し、保存してください。",
+      "dates": "期限",
+      "dueDate": "期限",
+      "list": "リスト",
+      "checklist": "チェックリスト",
+      "addChecklist": "チェックリストを追加",
+      "addChecklistItem": "項目を追加",
+      "attachments": "添付ファイル",
+      "addAttachment": "ファイルを添付",
+      "comments": "コメント",
+      "commentPlaceholder": "コメントを入力…",
+      "saveComment": "保存",
+      "activity": "アクティビティ",
+      "move": "移動",
+      "otherLanguage": "他の言語（任意）",
+      "viewOnly": "閲覧のみ — 編集権限がありません",
+      "loading": "読み込み中…",
+      "checklistTitlePlaceholder": "チェックリスト名",
+      "noAttachments": "添付ファイルなし",
+      "attachmentNamePlaceholder": "ファイル名",
+      "attachmentUrlPlaceholder": "リンク (URL)",
+      "activityCreated": "タスクを作成しました",
+      "quickActions": {
+        "label": "ラベル",
+        "dueDate": "期限",
+        "checklist": "チェックリスト",
+        "attachment": "ファイルを添付",
+        "assignee": "担当者",
+        "move": "移動"
+      }
+    },
+    "actions": {
+      "menu": "タスク操作",
+      "edit": "編集",
+      "complete": "完了にする",
+      "reopen": "再開する",
+      "duplicate": "複製",
+      "archive": "アーカイブ",
+      "archived": "タスクをアーカイブしました",
+      "delete": "削除",
+      "confirmDelete": "このタスクを削除しますか？",
+      "completed": "タスクを完了しました",
+      "reopened": "タスクを再開しました",
+      "duplicated": "タスクを複製しました",
+      "deleted": "タスクを削除しました"
+    },
+    "quickActions": {
+      "groupLabel": "ステータスを素早く変更",
+      "start": "進行中",
+      "complete": "完了",
+      "review": "レビュー",
+      "backToProgress": "進行中に戻す",
+      "reopen": "再開",
+      "statusUpdated": "ステータスを更新しました"
+    },
+    "form": {
+      "createTitle": "タスクを作成",
+      "editTitle": "タスクを編集",
+      "viewTitle": "タスク詳細",
+      "project": "プロジェクト",
+      "projectPlaceholder": "プロジェクトを選択",
+      "titleUz": "タイトル（ウズベク語）",
+      "titleJa": "タイトル（日本語）",
+      "descriptionUz": "説明（ウズベク語）",
+      "descriptionJa": "説明（日本語）",
+      "subject": "科目",
+      "noSubject": "科目なし",
+      "assignee": "担当者",
+      "unassigned": "未割り当て",
+      "status": "ステータス",
+      "startDate": "開始日",
+      "deadline": "締切",
+      "tags": "タグ",
+      "noTags": "タグがありません",
+      "sections": {
+        "project": "プロジェクト",
+        "projectDesc": "このタスクが属するプロジェクト",
+        "content": "内容",
+        "contentDesc": "1つの言語で入力後、翻訳ボタンで他方を生成",
+        "details": "詳細",
+        "detailsDesc": "科目、担当者、優先度、ステータス",
+        "schedule": "スケジュール",
+        "scheduleDesc": "開始日と締切",
+        "tagsDesc": "タグでタスクを分類"
+      },
+      "submitCreate": "作成",
+      "submitUpdate": "更新",
+      "submitting": "保存中...",
+      "created": "タスクを作成しました",
+      "updated": "タスクを更新しました",
+      "errors": {
+        "projectRequired": "プロジェクトを選択してください",
+        "titleMinLength": "タイトルは2文字以上必要です",
+        "titleMaxLength": "タイトルが長すぎます",
+        "descriptionMaxLength": "説明が長すぎます",
+        "subjectInvalid": "科目が無効です",
+        "assigneeInvalid": "担当者がプロジェクトメンバーではありません",
+        "tagInvalid": "タグが無効です",
+        "forbidden": "権限がありません",
+        "notFound": "タスクが見つかりません",
+        "saveFailed": "保存に失敗しました",
+        "deleteFailed": "削除に失敗しました"
+      }
+    },
+    "library": {
+      "title": "科目とタグ",
+      "subjectsTab": "科目",
+      "tagsTab": "タグ",
+      "createSubject": "科目を作成",
+      "createTag": "タグを作成",
+      "editSubject": "科目を編集",
+      "editTag": "タグを編集",
+      "edit": "編集",
+      "delete": "削除",
+      "save": "保存",
+      "submitting": "保存中...",
+      "created": "保存しました",
+      "updated": "更新しました",
+      "deleted": "削除しました",
+      "confirmDelete": "削除しますか？",
+      "emptySubjects": "科目がありません",
+      "emptyTags": "タグがありません",
+      "taskCount": "{count} タスク",
+      "nameUz": "名前（ウズベク語）",
+      "nameJa": "名前（日本語）",
+      "color": "色",
+      "errors": {
+        "nameMinLength": "名前は2文字以上必要です",
+        "nameMaxLength": "名前が長すぎます",
+        "colorInvalid": "色の形式が無効です",
+        "duplicateName": "同じ名前が既に存在します",
+        "forbidden": "権限がありません",
+        "notFound": "見つかりません",
+        "saveFailed": "保存に失敗しました",
+        "deleteFailed": "削除に失敗しました"
+      }
+    },
+    "empty": {
+      "title": "タスクがありません",
+      "description": "フィルターを変更するか、新しいタスクを作成してください"
+    },
+    "errors": {
+      "forbidden": "権限がありません",
+      "notFound": "タスクが見つかりません",
+      "saveFailed": "保存に失敗しました",
+      "deleteFailed": "削除に失敗しました"
+    }
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "タスク、締切、イベント、招待の通知",
+    "unread": "未読",
+    "unreadCount": "未読 {count} 件",
+    "listLabel": "通知一覧",
+    "totalCount": "{count} 件",
+    "allRead": "すべて既読",
+    "markRead": "既読にする",
+    "markAllRead": "すべて既読",
+    "delete": "削除",
+    "readSuccess": "既読にしました",
+    "allReadSuccess": "すべて既読にしました",
+    "deleted": "通知を削除しました",
+    "types": {
+      "DEADLINE_REMINDER": "締切リマインダー",
+      "TASK_ASSIGNED": "タスク割り当て",
+      "TASK_UPDATED": "タスク更新",
+      "TASK_COMPLETED": "タスク完了",
+      "TASK_OVERDUE": "期限切れ",
+      "PROJECT_INVITATION": "プロジェクト招待",
+      "INVITATION_ACCEPTED": "招待承認",
+      "ROLE_CHANGED": "ロール変更",
+      "EVENT_UPCOMING": "イベント",
+      "SYSTEM": "システム"
+    },
+    "empty": {
+      "title": "通知がありません",
+      "description": "新しい通知が届くとここに表示されます"
+    }
+  },
+  "calendar": {
+    "title": "カレンダー",
+    "description": "タスクの締切とイベントを表示します",
+    "createEvent": "イベント作成",
+    "quickCreate": {
+      "title": "イベント作成",
+      "titlePlaceholder": "イベント名…",
+      "submit": "作成",
+      "cancel": "キャンセル",
+      "hint": "詳細はイベントをクリックして編集できます。"
+    },
+    "overdue": "期限切れ",
+    "completed": "完了",
+    "taskDeadline": "タスク締切",
+    "moved": "イベントを移動しました",
+    "resize": "リサイズ",
+    "empty": "この期間に予定はありません",
+    "weekLabel": "週: {start}",
+    "listLabel": "今後30日",
+    "views": {
+      "month": "月",
+      "week": "週",
+      "day": "日",
+      "list": "リスト"
+    },
+    "navigation": {
+      "previous": "前へ",
+      "next": "次へ",
+      "today": "今日"
+    },
+    "filters": {
+      "project": "プロジェクト",
+      "subject": "科目",
+      "assignee": "担当者",
+      "allProjects": "すべてのプロジェクト",
+      "allSubjects": "すべての科目",
+      "allAssignees": "すべての担当者",
+      "showCompleted": "完了を表示",
+      "hideCompleted": "完了を非表示",
+      "reset": "リセット"
+    },
+    "form": {
+      "createTitle": "イベント作成",
+      "editTitle": "イベント編集",
+      "project": "プロジェクト",
+      "noProject": "個人イベント",
+      "titleUz": "タイトル（ウズベク語）",
+      "titleJa": "タイトル（日本語）",
+      "descriptionUz": "説明（ウズベク語）",
+      "descriptionJa": "説明（日本語）",
+      "startAt": "開始",
+      "endAt": "終了",
+      "allDay": "終日",
+      "locationUz": "場所（ウズベク語）",
+      "locationJa": "場所（日本語）",
+      "reminders": "リマインダー",
+      "reminderOffsets": {
+        "ONE_DAY_BEFORE": "1日前",
+        "THREE_HOURS_BEFORE": "3時間前",
+        "ONE_HOUR_BEFORE": "1時間前",
+        "CUSTOM": "カスタム"
+      },
+      "submitCreate": "作成",
+      "submitUpdate": "更新",
+      "submitting": "保存中...",
+      "delete": "削除",
+      "confirmDelete": "このイベントを削除しますか？",
+      "created": "イベントを作成しました",
+      "updated": "イベントを更新しました",
+      "deleted": "イベントを削除しました",
+      "errors": {
+        "titleMinLength": "タイトルは2文字以上必要です",
+        "startRequired": "開始日時を入力してください",
+        "endRequired": "終了日時を入力してください",
+        "endBeforeStart": "終了は開始より後である必要があります",
+        "forbidden": "権限がありません",
+        "notFound": "イベントが見つかりません",
+        "saveFailed": "保存に失敗しました",
+        "deleteFailed": "削除に失敗しました"
+      }
+    }
+  },
+  "members": {
+    "leaveProject": "プロジェクトを退出",
+    "confirmLeave": "このプロジェクトから退出しますか？",
+    "confirmRemove": "このメンバーを削除しますか？",
+    "removeMember": "メンバーを削除",
+    "changeRole": "ロールを変更",
+    "updatingRole": "ロールを更新中...",
+    "roles": {
+      "OWNER": "オーナー",
+      "ADMIN": "管理者",
+      "MEMBER": "メンバー",
+      "VIEWER": "閲覧者"
+    },
+    "invite": {
+      "title": "メンバーを招待",
+      "email": "メールアドレス",
+      "emailPlaceholder": "user@example.com",
+      "role": "ロール",
+      "submit": "招待を送信",
+      "submitting": "送信中...",
+      "linkReady": "開発用招待リンク",
+      "copyLink": "リンクをコピー"
+    },
+    "list": {
+      "title": "メンバー",
+      "empty": "メンバーがいません"
+    },
+    "pending": {
+      "title": "保留中の招待",
+      "empty": "保留中の招待はありません",
+      "expires": "有効期限",
+      "cancel": "キャンセル"
+    },
+    "transfer": {
+      "title": "オーナー権限の移譲",
+      "selectMember": "新しいオーナー",
+      "submit": "オーナー権限を移譲",
+      "submitting": "移譲中...",
+      "success": "オーナー権限を移譲しました",
+      "hint": "移譲後、あなたは管理者ロールになります"
+    },
+    "errors": {
+      "forbidden": "権限がありません",
+      "notFound": "メンバーが見つかりません",
+      "cannotLeaveAsOwner": "オーナーは移譲前に退出できません",
+      "memberRequired": "メンバーを選択してください",
+      "saveFailed": "操作に失敗しました",
+      "emailInvalid": "有効なメールアドレスを入力してください",
+      "roleInvalid": "無効なロールです",
+      "alreadyMember": "このユーザーは既にメンバーです",
+      "duplicateInvitation": "このメールアドレスへの保留中招待があります",
+      "expired": "招待の有効期限が切れています",
+      "invalidToken": "無効な招待リンクです",
+      "emailMismatch": "ログイン中のメールアドレスと招待先が一致しません",
+      "alreadyHandled": "この招待は既に処理されています"
+    }
+  },
+  "invitations": {
+    "pageTitle": "プロジェクト招待",
+    "pageDescription": "招待を確認して参加または辞退してください",
+    "response": {
+      "title": "プロジェクトへの招待",
+      "description": "以下のプロジェクトに参加するよう招待されています",
+      "invitedAs": "ロール: {role}",
+      "invitedBy": "招待者: {name}",
+      "invitedEmail": "招待先: {email}",
+      "accept": "参加する",
+      "accepting": "参加中...",
+      "decline": "辞退する"
+    },
+    "roles": {
+      "ADMIN": "管理者",
+      "MEMBER": "メンバー",
+      "VIEWER": "閲覧者"
+    },
+    "status": {
+      "ACCEPTED": "この招待は既に承認されています",
+      "DECLINED": "この招待は辞退されています",
+      "EXPIRED": "この招待は期限切れです",
+      "CANCELLED": "この招待はキャンセルされました"
+    },
+    "errors": {
+      "emailMismatch": "別のアカウントでログインしています"
+    }
+  },
+  "theme": {
+    "toggle": "テーマ切替",
+    "nightMode": "ナイトモード",
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "locale": {
+    "label": "言語",
+    "ja": "日本語",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "translation": {
+    "translate": "翻訳",
+    "translating": "翻訳中...",
+    "bilingualHint": "1言語で入力 → 翻訳 → 両方保存",
+    "manualOnlyHint": "翻訳API未設定 — 両言語を手入力してください",
+    "confirmOverwrite": "翻訳先のフィールドに既に内容があります。上書きしますか？",
+    "errors": {
+      "notConfigured": "翻訳サービスが設定されていません",
+      "emptySource": "翻訳するテキストを一方の言語フィールドに入力してください",
+      "sameLanguage": "翻訳元と翻訳先の言語が同じです",
+      "tooLong": "テキストが長すぎます",
+      "rateLimited": "翻訳リクエストが多すぎます。しばらくしてから再試行してください",
+      "providerError": "翻訳に失敗しました。後でもう一度お試しください",
+      "forbidden": "翻訳するにはログインが必要です"
+    }
+  }
+}
