@@ -74,6 +74,9 @@
     "submittingRegister": "Ro'yxatdan o'tish...",
     "registrationSuccess": "Hisob yaratildi. Endi tizimga kiring.",
     "emailPlaceholder": "talaba@example.com",
+    "showPassword": "Parolni ko'rsatish",
+    "hidePassword": "Parolni yashirish",
+    "forgotPassword": "Parolni unutdingizmi?",
     "noAccount": "Hisobingiz yo'qmi?",
     "hasAccount": "Allaqachon hisobingiz bormi?",
     "languages": {

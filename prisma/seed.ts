@@ -18,13 +18,13 @@ const BCRYPT_ROUNDS = 12;
 const SEED_EMAILS = [
   "student@example.com",
   "talaba@example.com",
-  "sardor@example.com",
+  "nazifa@example.com",
 ] as const;
 
 async function main() {
   const passwordHash = await bcrypt.hash("Student1!", BCRYPT_ROUNDS);
   const passwordHashUz = await bcrypt.hash("Talaba1!", BCRYPT_ROUNDS);
-  const passwordHashAdmin = await bcrypt.hash("Sardor1!", BCRYPT_ROUNDS);
+  const passwordHashAdmin = await bcrypt.hash("Nazifa1!", BCRYPT_ROUNDS);
 
   const yuki = await prisma.user.upsert({
     where: { email: "student@example.com" },
@@ -60,24 +60,24 @@ async function main() {
     },
   });
 
-  const sardor = await prisma.user.upsert({
-    where: { email: "sardor@example.com" },
+  const nazifa = await prisma.user.upsert({
+    where: { email: "nazifa@example.com" },
     update: {
-      fullName: "Sardor Aliyev",
+      fullName: "Nazifa Abilova",
       passwordHash: passwordHashAdmin,
       preferredLanguage: "UZ",
       theme: "DARK",
     },
     create: {
-      fullName: "Sardor Aliyev",
-      email: "sardor@example.com",
+      fullName: "Nazifa Abilova",
+      email: "nazifa@example.com",
       passwordHash: passwordHashAdmin,
       preferredLanguage: "UZ",
       theme: "DARK",
     },
   });
 
-  const seedUserIds = [yuki.id, aziza.id, sardor.id];
+  const seedUserIds = [yuki.id, aziza.id, nazifa.id];
 
   await prisma.notification.deleteMany({ where: { userId: { in: seedUserIds } } });
   await prisma.taskTag.deleteMany({});
@@ -117,7 +117,7 @@ async function main() {
         create: [
           { userId: aziza.id, role: "OWNER" },
           { userId: yuki.id, role: "MEMBER" },
-          { userId: sardor.id, role: "ADMIN" },
+          { userId: nazifa.id, role: "ADMIN" },
         ],
       },
     },
@@ -150,7 +150,7 @@ async function main() {
     data: {
       projectId: dailyStudyProject.id,
       inviterId: aziza.id,
-      invitedEmail: "sardor@example.com",
+      invitedEmail: "nazifa@example.com",
       role: "MEMBER",
       token: devInvitationToken,
       expiresAt: getInvitationExpiresAt(),
@@ -307,7 +307,7 @@ async function main() {
       descriptionJa: "〜てください、〜ませんか の文型を学び例文を書く。",
       status: "TODO" as const,
       priority: "MEDIUM" as const,
-      creatorId: sardor.id,
+      creatorId: nazifa.id,
       assigneeId: aziza.id,
       deadline: addDays(today, 2),
     },
@@ -378,7 +378,7 @@ async function main() {
       descriptionJa: "模擬試験を時間内に受け、間違いを分析する。",
       status: "COMPLETED" as const,
       priority: "HIGH" as const,
-      creatorId: sardor.id,
+      creatorId: nazifa.id,
       assigneeId: aziza.id,
       deadline: subDays(today, 5),
       completedAt: subDays(today, 4),
@@ -436,7 +436,7 @@ async function main() {
         startAt: addDays(setHours(today, 14), 2),
         endAt: addDays(setHours(today, 16), 2),
         projectId: n5Project.id,
-        creatorId: sardor.id,
+        creatorId: nazifa.id,
       },
       {
         titleUz: "JLPT mock imtihon",

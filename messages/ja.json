@@ -74,6 +74,9 @@
     "submittingRegister": "登録中...",
     "registrationSuccess": "アカウントが作成されました。ログインしてください。",
     "emailPlaceholder": "student@example.com",
+    "showPassword": "パスワードを表示",
+    "hidePassword": "パスワードを非表示",
+    "forgotPassword": "パスワードをお忘れですか？",
     "noAccount": "アカウントをお持ちでないですか？",
     "hasAccount": "すでにアカウントをお持ちですか？",
     "languages": {

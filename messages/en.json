@@ -74,6 +74,9 @@
     "submittingRegister": "Creating account...",
     "registrationSuccess": "Account created. Please log in.",
     "emailPlaceholder": "student@example.com",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "forgotPassword": "Forgot your password?",
     "noAccount": "Don't have an account?",
     "hasAccount": "Already have an account?",
     "languages": {
